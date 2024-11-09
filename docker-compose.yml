@@ -1,0 +1,61 @@
+version: '3.8'
+
+services:
+  bun_app:
+    build: .
+    volumes:
+      - .:/app  # Monter le volume pour le hot reload (code de l'application)
+    ports:
+      - "3000:3000"  # Rediriger le port 3000
+    environment:
+      - BUN_ENV=development  # Mettre en place un environnement de développement
+      - REDIS_URL=redis:6379  # Configurer Bun pour accéder à Redis
+      - POSTGRES_URL=postgres://ImAnAlbatraoz:strongpassword@postgres:5432/OPtracker  # Configurer Bun pour accéder à PostgreSQL
+    depends_on:
+      - postgres  # Attendre que PostgreSQL soit prêt
+      - redis      # Attendre que Redis soit prêt
+
+  postgres:
+    image: postgres:15-alpine  # Version légère de PostgreSQL
+    container_name: OPtracker_database
+    environment:
+      POSTGRES_USER: ImAnAlbatraoz        # Remplace par ton utilisateur
+      POSTGRES_PASSWORD: strongpassword  # Remplace par ton mot de passe
+      POSTGRES_DB: OPtracker            # Nom de la base de données
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  # Persistance des données
+    networks:
+      - tracker_network
+    ports:
+      - "5432:5432"
+
+  nginx:
+    image: nginx:alpine
+    container_name: tracker_nginx
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    networks:
+      - tracker_network
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - bun_app  # Attendre que le bun_app soit prêt
+
+  redis:
+    image: redis:alpine  # Version légère de Redis
+    container_name: tracker_redis
+    volumes:
+      - redis_data:/data  # Persistance des données Redis (sessions)
+    networks:
+      - tracker_network
+    ports:
+      - "6379:6379"
+
+networks:
+  tracker_network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+  redis_data:
