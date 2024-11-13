@@ -1,10 +1,10 @@
 {
   "name": "optracker",
-  "module": "OPTracker_tracker/index.ts",
+  "module": "index.ts",
   "type": "module",
   "scripts": {
-    "dev": "bun --hot run OPTracker_tracker/index.ts",
-    "start": "bun run OPTracker_tracker/index.ts",
+    "dev": "bun --hot run index.ts",
+    "start": "bun run index.ts",
     "format": "OPTracker_tracker/node_modules/.bin/prettier --write  --ignore-path ../.gitignore"
   },
   "devDependencies": {

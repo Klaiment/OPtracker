@@ -3,9 +3,13 @@ version: '3.8'
 services:
   tracker:
     container_name: OPtracker_tracker
-    build: ./OPTracker_tracker
+    build:
+      context: ./OPTracker_tracker
     volumes:
-      - .:/app
+      - ./OPTracker_tracker:/app
+      - type: bind
+        source: ./config.ts
+        target: /app/config.ts
     ports:
       - "3000:3000"
     environment:
