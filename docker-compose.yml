@@ -1,6 +1,35 @@
 version: '3.8'
 
 services:
+  tracker:
+    container_name: OPtracker_tracker
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    environment:
+      - BUN_ENV=development
+      - POSTGRES_URL=postgres://ImAnAlbatraoz:strongpassword@postgres:5432/OPtracker
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - tracker_network
+
+  nginx:
+    image: nginx:alpine
+    container_name: OPtracker_nginx
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    networks:
+      - tracker_network
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - tracker
+
   optracker_db:
     image: postgres:15
     container_name: optracker_db
@@ -15,11 +44,22 @@ services:
     ports:
       - "5433:5432"
     networks:
-      - my_network
+      - OPNetwork
+  redis:
+    image: redis:alpine
+    container_name: OPtracker_redis
+    volumes:
+      - redis_data:/data
+    networks:
+      - OPNetwork
+    ports:
+      - "6379:6379"
+    restart: always
 
 volumes:
-  optracker_db_data:  # Définition d'un volume spécifique pour optracker_db
+  optracker_db_data:
+  redis_data:
 
 networks:
-  my_network:
+  OPNetwork:
     driver: bridge
