@@ -1,5 +1,5 @@
 import postgres from 'postgres';
-import { config } from './config.ts';
+import { config } from '../config.ts';
 const sql = postgres({
   host: config.DATABASE_HOST,
   port: config.DATABASE_PORT,

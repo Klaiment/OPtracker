@@ -3,7 +3,7 @@ version: '3.8'
 services:
   tracker:
     container_name: OPtracker_tracker
-    build: .
+    build: ./OPTracker_tracker
     volumes:
       - .:/app
     ports:

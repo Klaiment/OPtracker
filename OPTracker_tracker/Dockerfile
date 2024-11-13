@@ -2,11 +2,11 @@ FROM oven/bun:latest
 
 WORKDIR /app
 
-COPY package.json ./
+COPY ../package.json ./
 
 RUN bun install
 
-COPY . .
+COPY .. .
 
 EXPOSE 3000
 

@@ -1,16 +1,15 @@
 {
   "name": "optracker",
-  "module": "index.ts",
+  "module": "OPTracker_tracker/index.ts",
   "type": "module",
   "scripts": {
-    "dev": "bun --hot run index.ts",
-    "start": "bun run index.ts",
-    "format": "prettier --write . --ignore-path .gitignore"
+    "dev": "bun --hot run OPTracker_tracker/index.ts",
+    "start": "bun run OPTracker_tracker/index.ts",
+    "format": "OPTracker_tracker/node_modules/.bin/prettier --write  --ignore-path ../.gitignore"
   },
   "devDependencies": {
     "@types/bun": "latest",
-    "prettier": "^3.3.3",
-    "prisma": "^5.22.0"
+    "prettier": "^3.3.3"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"

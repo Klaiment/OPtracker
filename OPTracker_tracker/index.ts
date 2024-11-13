@@ -1,4 +1,4 @@
-import { config } from './config.ts';
+import { config } from '../config.ts';
 import Redis from 'ioredis';
 import qs from 'qs';
 import bencode from 'bencode';
