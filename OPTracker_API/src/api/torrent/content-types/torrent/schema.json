@@ -1,0 +1,104 @@
+{
+  "kind": "collectionType",
+  "collectionName": "torrents",
+  "info": {
+    "singularName": "torrent",
+    "pluralName": "torrents",
+    "displayName": "torrents",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "mediainfo": {
+      "type": "text"
+    },
+    "file_name": {
+      "type": "string"
+    },
+    "num_file": {
+      "type": "integer"
+    },
+    "size": {
+      "type": "decimal",
+      "default": 0
+    },
+    "leechers": {
+      "type": "integer",
+      "default": 0
+    },
+    "seeders": {
+      "type": "integer",
+      "default": 0
+    },
+    "times_completed": {
+      "type": "integer"
+    },
+    "user_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "torrents"
+    },
+    "imdb": {
+      "type": "string"
+    },
+    "tvdb": {
+      "type": "string"
+    },
+    "tmdb": {
+      "type": "string"
+    },
+    "season_number": {
+      "type": "integer"
+    },
+    "episode_number": {
+      "type": "integer"
+    },
+    "doubleup": {
+      "type": "boolean",
+      "default": false
+    },
+    "free": {
+      "type": "boolean",
+      "default": false
+    },
+    "highspeed": {
+      "type": "boolean",
+      "default": false
+    },
+    "anon": {
+      "type": "boolean",
+      "default": false
+    },
+    "moderated_at": {
+      "type": "datetime"
+    },
+    "moderated_by": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "torrents_moderated"
+    },
+    "deleted_at": {
+      "type": "datetime"
+    },
+    "info_hash": {
+      "type": "string"
+    },
+    "comments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::comment.comment",
+      "mappedBy": "torrent"
+    }
+  }
+}
