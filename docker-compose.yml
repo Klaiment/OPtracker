@@ -12,10 +12,10 @@ services:
       - BUN_ENV=development
       - POSTGRES_URL=postgres://ImAnAlbatraoz:strongpassword@postgres:5432/OPtracker
     depends_on:
-      - postgres
+      - optracker_db
       - redis
     networks:
-      - tracker_network
+      - OPNetwork
 
   nginx:
     image: nginx:alpine
@@ -23,7 +23,7 @@ services:
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
     networks:
-      - tracker_network
+      - OPNetwork
     ports:
       - "80:80"
       - "443:443"
