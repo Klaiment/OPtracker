@@ -3,12 +3,22 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "dev": "bun index.ts"
+    "dev": "bun --hot run index.ts",
+    "start": "bun run index.ts",
+    "format": "prettier --write . --ignore-path .gitignore"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "prettier": "^3.3.3",
+    "prisma": "^5.22.0"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "bencode": "^4.0.0",
+    "ioredis": "^5.4.1",
+    "postgres": "^3.4.5",
+    "qs": "^6.13.0"
   }
 }
