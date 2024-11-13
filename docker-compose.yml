@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  optracker_db:
+    image: postgres:15
+    container_name: optracker_db
+    restart: always
+    environment:
+      POSTGRES_USER: optracker
+      POSTGRES_PASSWORD: changeMeOpTracker
+      POSTGRES_DB: optracker_db
+      PGTZ: Europe/Paris
+    volumes:
+      - optracker_db_data:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
+    networks:
+      - my_network
+
+volumes:
+  optracker_db_data:  # Définition d'un volume spécifique pour optracker_db
+
+networks:
+  my_network:
+    driver: bridge
