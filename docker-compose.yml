@@ -16,8 +16,45 @@ services:
       - BUN_ENV=development
       - POSTGRES_URL=postgres://ImAnAlbatraoz:strongpassword@postgres:5432/OPtracker
     depends_on:
-      - optracker_db
+      - OPTracker_database
       - redis
+    networks:
+      - OPNetwork
+
+  api:
+    container_name: OPtracker_API
+    build:
+      context: ./OPTracker_API
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    env_file: ./OPTracker_API/.env
+    volumes:
+      - ./OPTracker_API/config:/opt/app/config
+      - ./OPTracker_API/src:/opt/app/src
+      - ./OPTracker_API/package.json:/opt/package.json
+      - ./OPTracker_API/yarn.lock:/opt/yarn.lock
+      - ./OPTracker_API/.env:/opt/app/.env
+      - ./OPTracker_API/public/uploads:/opt/app/public/uploads
+    ports:
+      - "1337:1337"
+    environment:
+      - BUN_ENV=development
+      - HOST=0.0.0.0
+      - PORT=1337
+      - APP_KEYS=uYFeBM3KC3NNFR8jB6G17g==,qWrP+nmUfwks2mS4bCAe7w==,KNScYpF3eHGffATPaIUc4g==,qG4R5HrfQ6+GddSyeYXzbg==
+      - API_TOKEN_SALT=xPP38uEGYlb9Wpq9qGhMGQ==
+      - ADMIN_JWT_SECRET=WrFr4TrZhq4yL8S8L+KYJw==
+      - TRANSFER_TOKEN_SALT=rR0hjHxqrNlLMtf/h7sGFg==
+      - DATABASE_CLIENT=postgres
+      - DATABASE_HOST=OPTracker_database
+      - DATABASE_PORT=5432
+      - DATABASE_NAME=optracker_db
+      - DATABASE_USERNAME=optracker
+      - DATABASE_PASSWORD=changeMeOpTracker
+      - DATABASE_SSL=false
+      - JWT_SECRET=iEDM7A1fte3G3cNZPgl3QQ==
+    depends_on:
+      - OPTracker_database
     networks:
       - OPNetwork
 
@@ -34,9 +71,9 @@ services:
     depends_on:
       - tracker
 
-  optracker_db:
+  OPTracker_database:
     image: postgres:15
-    container_name: optracker_db
+    container_name: OPTracker_database
     restart: always
     environment:
       POSTGRES_USER: optracker
