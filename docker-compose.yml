@@ -16,7 +16,7 @@ services:
       - BUN_ENV=development
       - POSTGRES_URL=postgres://ImAnAlbatraoz:strongpassword@postgres:5432/OPtracker
     depends_on:
-      - optracker_db
+      - OPTracker_database
       - redis
     networks:
       - OPNetwork
@@ -46,15 +46,15 @@ services:
       - ADMIN_JWT_SECRET=WrFr4TrZhq4yL8S8L+KYJw==
       - TRANSFER_TOKEN_SALT=rR0hjHxqrNlLMtf/h7sGFg==
       - DATABASE_CLIENT=postgres
-      - DATABASE_HOST=127.0.0.1
-      - DATABASE_PORT=5433
+      - DATABASE_HOST=OPTracker_database
+      - DATABASE_PORT=5432
       - DATABASE_NAME=optracker_db
       - DATABASE_USERNAME=optracker
       - DATABASE_PASSWORD=changeMeOpTracker
       - DATABASE_SSL=false
       - JWT_SECRET=iEDM7A1fte3G3cNZPgl3QQ==
     depends_on:
-      - optracker_db
+      - OPTracker_database
     networks:
       - OPNetwork
 
@@ -71,9 +71,9 @@ services:
     depends_on:
       - tracker
 
-  optracker_db:
+  OPTracker_database:
     image: postgres:15
-    container_name: optracker_db
+    container_name: OPTracker_database
     restart: always
     environment:
       POSTGRES_USER: optracker
