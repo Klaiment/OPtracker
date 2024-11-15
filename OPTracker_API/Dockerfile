@@ -45,4 +45,4 @@ RUN ["npm", "run", "build"]
 EXPOSE 1337
 
 # Lancer l'application en mode développement
-CMD ["npm", "run", "develop"]
+CMD ["npm", "run", "start"]
