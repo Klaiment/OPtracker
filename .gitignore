@@ -304,3 +304,48 @@ OPTracker_API/build
 OPTracker_API/.strapi-updater.json
 OPTracker_API/.strapi-cloud.json
 /config.ts
+
+
+
+
+#FRONT
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+OPTracker_client/# dependencies
+OPTracker_client//node_modules
+OPTracker_client//.pnp
+OPTracker_client/.pnp.*
+OPTracker_client/.yarn/*
+OPTracker_client/!.yarn/patches
+OPTracker_client/!.yarn/plugins
+OPTracker_client/!.yarn/releases
+OPTracker_client/!.yarn/versions
+
+OPTracker_client/# testing
+OPTracker_client//coverage
+
+OPTracker_client/# next.js
+OPTracker_client//.next/
+OPTracker_client//out/
+
+OPTracker_client/# production
+OPTracker_client//build
+
+OPTracker_client/# misc
+OPTracker_client/.DS_Store
+OPTracker_client/*.pem
+
+OPTracker_client/# debug
+OPTracker_client/npm-debug.log*
+OPTracker_client/yarn-debug.log*
+OPTracker_client/yarn-error.log*
+
+OPTracker_client/# env files (can opt-in for committing if needed)
+OPTracker_client/.env*
+
+OPTracker_client/# vercel
+OPTracker_client/.vercel
+
+OPTracker_client/# typescript
+OPTracker_client/*.tsbuildinfo
+OPTracker_client/next-env.d.ts
