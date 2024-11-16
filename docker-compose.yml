@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   tracker:
     container_name: OPtracker_tracker
@@ -96,7 +94,21 @@ services:
     ports:
       - "6379:6379"
     restart: always
-
+  client:
+    container_name: OPTracker_client
+    build:
+      context: ./OPTracker_client
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    volumes:
+      - ./OPTracker_client:/app
+      - ./config.ts:/app/config.ts
+    ports:
+      - "3100:3100"
+    depends_on:
+      - api
+    networks:
+      - OPNetwork
 volumes:
   optracker_db_data:
   redis_data:

@@ -1,0 +1,5 @@
+**/node_modules/
+../OPTracker_API/*
+../OPTracker_tracker/*
+.next
+node_modules
