@@ -75,5 +75,59 @@
       "retry": "Try again",
       "home": "Return Home"
     }
+  },
+  "torrents": {
+    "list": {
+      "title": "Browse Torrents",
+      "filters": {
+        "title": "Filters",
+        "category": "Category",
+        "status": "Status",
+        "sort": "Sort by",
+        "order": {
+          "newest": "Newest",
+          "oldest": "Oldest",
+          "mostDownloaded": "Most Downloaded",
+          "mostSeeded": "Most Seeded",
+          "largest": "Largest Size",
+          "smallest": "Smallest Size"
+        }
+      },
+      "noResults": "No torrents found",
+      "loading": "Loading torrents..."
+    },
+    "detail": {
+      "information": "Information",
+      "files": "Files",
+      "comments": "Comments",
+      "peers": "Peers",
+      "download": "Download",
+      "stats": {
+        "size": "Size",
+        "added": "Added",
+        "seeders": "Seeders",
+        "leechers": "Leechers",
+        "completed": "Completed",
+        "ratio": "Ratio"
+      }
+    },
+    "upload": {
+      "title": "Upload Torrent",
+      "form": {
+        "torrentFile": "Torrent File",
+        "name": "Name",
+        "description": "Description",
+        "category": "Category",
+        "tags": "Tags",
+        "visibility": "Visibility",
+        "submit": "Upload"
+      },
+      "dropzone": {
+        "text": "Drop torrent file here or click to select",
+        "accepted": ".torrent files only"
+      },
+      "success": "Torrent uploaded successfully",
+      "error": "Error uploading torrent"
+    }
   }
 } 

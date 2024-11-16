@@ -1,7 +1,7 @@
 {
   "home": {
     "title": "OPTracker",
-    "subtitle": "The OverPowered Torrent Tracker",
+    "subtitle": "El Rastreador de Torrents OverPowered",
     "search": {
       "placeholder": "Buscar torrents...",
       "button": "Buscar",
@@ -21,7 +21,7 @@
       "stats": "Estadísticas"
     },
     "footer": {
-      "description": "OPTracker - Open Source Torrent Tracker",
+      "description": "OPTracker - Rastreador de Torrents de Código Abierto",
       "about": "Acerca de",
       "stats": "Estadísticas",
       "api": "API"
@@ -74,6 +74,60 @@
       "backToLogin": "Volver al Login",
       "success": "Si existe una cuenta con este correo, recibirás instrucciones de recuperación",
       "error": "No se pudo procesar la solicitud de recuperación"
+    }
+  },
+  "torrents": {
+    "list": {
+      "title": "Explorar Torrents",
+      "filters": {
+        "title": "Filtros",
+        "category": "Categoría",
+        "status": "Estado",
+        "sort": "Ordenar por",
+        "order": {
+          "newest": "Más recientes",
+          "oldest": "Más antiguos",
+          "mostDownloaded": "Más descargados",
+          "mostSeeded": "Más seedeados",
+          "largest": "Mayor tamaño",
+          "smallest": "Menor tamaño"
+        }
+      },
+      "noResults": "No se encontraron torrents",
+      "loading": "Cargando torrents..."
+    },
+    "detail": {
+      "information": "Información",
+      "files": "Archivos",
+      "comments": "Comentarios",
+      "peers": "Peers",
+      "download": "Descargar",
+      "stats": {
+        "size": "Tamaño",
+        "added": "Añadido",
+        "seeders": "Seeders",
+        "leechers": "Leechers",
+        "completed": "Completados",
+        "ratio": "Ratio"
+      }
+    },
+    "upload": {
+      "title": "Subir Torrent",
+      "form": {
+        "torrentFile": "Archivo Torrent",
+        "name": "Nombre",
+        "description": "Descripción",
+        "category": "Categoría",
+        "tags": "Etiquetas",
+        "visibility": "Visibilidad",
+        "submit": "Subir"
+      },
+      "dropzone": {
+        "text": "Arrastra el archivo torrent aquí o haz clic para seleccionar",
+        "accepted": "Solo archivos .torrent"
+      },
+      "success": "Torrent subido exitosamente",
+      "error": "Error al subir el torrent"
     }
   }
 } 

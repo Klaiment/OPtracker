@@ -27,19 +27,6 @@
       "api": "API"
     }
   },
-  "errors": {
-    "404": {
-      "title": "Page Non Trouvée",
-      "message": "La ressource demandée est introuvable",
-      "home": "Retour à l'Accueil"
-    },
-    "500": {
-      "title": "Erreur Interne du Serveur",
-      "message": "Une erreur s'est produite !",
-      "retry": "Réessayer",
-      "home": "Retour à l'Accueil"
-    }
-  },
   "auth": {
     "login": {
       "title": "Connexion",
@@ -74,6 +61,60 @@
       "backToLogin": "Retour à la connexion",
       "success": "Si un compte existe avec cet email, vous recevrez les instructions de récupération",
       "error": "Impossible de traiter la demande de récupération"
+    }
+  },
+  "torrents": {
+    "list": {
+      "title": "Parcourir les Torrents",
+      "filters": {
+        "title": "Filtres",
+        "category": "Catégorie",
+        "status": "Statut",
+        "sort": "Trier par",
+        "order": {
+          "newest": "Plus récents",
+          "oldest": "Plus anciens",
+          "mostDownloaded": "Plus téléchargés",
+          "mostSeeded": "Plus partagés",
+          "largest": "Plus volumineux",
+          "smallest": "Moins volumineux"
+        }
+      },
+      "noResults": "Aucun torrent trouvé",
+      "loading": "Chargement des torrents..."
+    },
+    "detail": {
+      "information": "Information",
+      "files": "Fichiers",
+      "comments": "Commentaires",
+      "peers": "Pairs",
+      "download": "Télécharger",
+      "stats": {
+        "size": "Taille",
+        "added": "Ajouté",
+        "seeders": "Seeders",
+        "leechers": "Leechers",
+        "completed": "Complétés",
+        "ratio": "Ratio"
+      }
+    },
+    "upload": {
+      "title": "Uploader un Torrent",
+      "form": {
+        "torrentFile": "Fichier Torrent",
+        "name": "Nom",
+        "description": "Description",
+        "category": "Catégorie",
+        "tags": "Tags",
+        "visibility": "Visibilité",
+        "submit": "Uploader"
+      },
+      "dropzone": {
+        "text": "Déposez le fichier torrent ici ou cliquez pour sélectionner",
+        "accepted": "Fichiers .torrent uniquement"
+      },
+      "success": "Torrent uploadé avec succès",
+      "error": "Erreur lors de l'upload du torrent"
     }
   }
 } 
