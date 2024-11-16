@@ -184,7 +184,11 @@
           "title": "Paramètres Généraux",
           "siteName": "Nom du Site",
           "siteDescription": "Description du Site",
-          "maintenance": "Mode Maintenance"
+          "maintenance": "Mode Maintenance",
+          "logo": "Logo du Site",
+          "uploadLogo": "Télécharger Logo",
+          "removeLogo": "Supprimer Logo",
+          "logoHelp": "Taille recommandée : 320x100px. Supporte PNG, JPG, SVG."
         },
         "registration": {
           "title": "Paramètres d'Inscription",
@@ -209,6 +213,206 @@
       "users": "Utilisateurs",
       "torrents": "Torrents",
       "settings": "Paramètres"
+    }
+  },
+  "theme": {
+    "toggle": "Changer le thème",
+    "dark": "Mode sombre",
+    "light": "Mode clair"
+  },
+  "profile": {
+    "title": "Profil",
+    "sections": {
+      "info": "Informations Générales",
+      "stats": "Statistiques",
+      "preferences": "Préférences"
+    },
+    "fields": {
+      "username": "Nom d'utilisateur",
+      "email": "Email",
+      "joinDate": "Membre Depuis",
+      "avatar": "Photo de Profil",
+      "uploaded": "Total Uploadé",
+      "downloaded": "Total Téléchargé",
+      "ratio": "Ratio",
+      "points": "Points",
+      "rank": "Rang Utilisateur"
+    },
+    "preferences": {
+      "notifications": "Activer les Notifications",
+      "privateProfile": "Profil Privé",
+      "language": "Langue",
+      "theme": {
+        "title": "Thème",
+        "light": "Mode Clair",
+        "dark": "Mode Sombre",
+        "system": "Par Défaut du Système",
+        "toggle": "Changer le Thème"
+      }
+    },
+    "actions": {
+      "uploadAvatar": "Télécharger Photo",
+      "removeAvatar": "Supprimer Photo",
+      "saveChanges": "Sauvegarder",
+      "changePassword": "Changer le Mot de Passe"
+    },
+    "stats": {
+      "title": "Statistiques",
+      "charts": {
+        "activityTitle": "Activité de Transfert",
+        "categoryTitle": "Distribution par Catégorie",
+        "ratioTitle": "Évolution du Ratio",
+        "upload": "Upload",
+        "download": "Téléchargement",
+        "ratio": "Ratio",
+        "timeRanges": {
+          "day": "24 Heures",
+          "week": "Semaine",
+          "month": "Mois",
+          "year": "Année"
+        },
+        "categories": {
+          "movies": "Films",
+          "tvShows": "Séries",
+          "music": "Musique",
+          "software": "Logiciels",
+          "games": "Jeux",
+          "other": "Autres"
+        },
+        "tooltips": {
+          "transfered": "Transféré",
+          "ratio": "Ratio",
+          "percentage": "Pourcentage"
+        }
+      },
+      "achievements": {
+        "title": "Réalisations",
+        "uploader": "Top Uploadeur",
+        "seeder": "Seeder Dévoué",
+        "contributor": "Contributeur Précieux"
+      }
+    },
+    "history": {
+      "title": "Historique des Téléchargements",
+      "filters": {
+        "status": "Statut",
+        "search": "Rechercher",
+        "searchPlaceholder": "Rechercher par nom...",
+        "all": "Tous les Statuts"
+      },
+      "table": {
+        "name": "Nom du Torrent",
+        "date": "Date de Téléchargement",
+        "size": "Taille",
+        "uploaded": "Uploadé",
+        "downloaded": "Téléchargé",
+        "ratio": "Ratio",
+        "status": "Statut"
+      },
+      "status": {
+        "completed": "Terminé",
+        "active": "Actif",
+        "stopped": "Arrêté"
+      },
+      "stats": {
+        "totalDownloads": "Téléchargements Totaux",
+        "activeDownloads": "Téléchargements Actifs",
+        "totalData": "Données Totales",
+        "avgRatio": "Ratio Moyen"
+      },
+      "empty": "Aucun téléchargement trouvé",
+      "loading": "Chargement de l'historique..."
+    },
+    "nav": {
+      "overview": "Aperçu",
+      "history": "Historique",
+      "stats": "Statistiques",
+      "settings": "Paramètres"
+    },
+    "settings": {
+      "title": "Paramètres du Profil",
+      "sections": {
+        "security": "Sécurité",
+        "notifications": "Notifications",
+        "privacy": "Confidentialité",
+        "preferences": "Préférences",
+        "downloads": "Téléchargements"
+      },
+      "fields": {
+        "email": "Adresse Email",
+        "currentPassword": "Mot de Passe Actuel",
+        "newPassword": "Nouveau Mot de Passe",
+        "confirmPassword": "Confirmer le Mot de Passe",
+        "downloadPath": "Chemin de Téléchargement par Défaut",
+        "language": "Langue",
+        "theme": "Thème"
+      },
+      "notifications": {
+        "emailNotifications": "Notifications par Email",
+        "browserNotifications": "Notifications du Navigateur",
+        "newsletterSubscription": "Abonnement à la Newsletter",
+        "downloadComplete": "Notifications de Téléchargement Terminé",
+        "newMessage": "Notifications de Nouveaux Messages"
+      },
+      "privacy": {
+        "showProfile": "Montrer le Profil aux Autres",
+        "showStats": "Montrer les Statistiques",
+        "showHistory": "Montrer l'Historique",
+        "showOnlineStatus": "Montrer le Statut en Ligne"
+      },
+      "preferences": {
+        "theme": {
+          "title": "Thème",
+          "light": "Mode Clair",
+          "dark": "Mode Sombre",
+          "system": "Par Défaut du Système",
+          "toggle": "Changer le Thème"
+        },
+        "autoStart": "Démarrage Automatique des Téléchargements",
+        "defaultCategory": "Catégorie par Défaut",
+        "maxActiveDownloads": "Maximum de Téléchargements Actifs",
+        "maxActiveUploads": "Maximum d'Uploads Actifs"
+      },
+      "actions": {
+        "save": "Sauvegarder",
+        "changePassword": "Changer le Mot de Passe",
+        "cancel": "Annuler",
+        "reset": "Réinitialiser"
+      },
+      "messages": {
+        "saved": "Paramètres sauvegardés avec succès",
+        "error": "Erreur lors de la sauvegarde",
+        "passwordChanged": "Mot de passe changé avec succès",
+        "confirmReset": "Êtes-vous sûr de vouloir réinitialiser tous les paramètres ?"
+      },
+      "errors": {
+        "invalidEmail": "Adresse email invalide",
+        "passwordMismatch": "Les mots de passe ne correspondent pas",
+        "currentPasswordRequired": "Le mot de passe actuel est requis",
+        "invalidPath": "Chemin de téléchargement invalide"
+      }
+    },
+    "activity": {
+      "title": "Activité Récente",
+      "types": {
+        "download": {
+          "title": "Téléchargement démarré",
+          "completed": "Téléchargement terminé"
+        },
+        "achievement": {
+          "title": "Succès débloqué"
+        },
+        "ratio": {
+          "title": "Ratio mis à jour",
+          "increased": "Ratio augmenté à {{newRatio}}",
+          "decreased": "Ratio diminué à {{newRatio}}"
+        },
+        "seeding": {
+          "title": "Partage de {{seedingCount}} torrents",
+          "started": "Partage démarré",
+          "stopped": "Partage arrêté"
+        }
+      }
     }
   }
 } 

@@ -4,21 +4,89 @@
 
 @layer base {
   :root {
-    --primary: #569cd6;     /* VS Code blue */
-    --primary-dark: #4a85ba;
-    --accent: #c586c0;      /* VS Code purple */
-    --background: #1e1e1e;  /* VS Code dark background */
-    --surface: #252526;     /* VS Code sidebar */
-    --text: #d4d4d4;        /* VS Code main text */
-    --text-secondary: #858585;
-    --border: #3c3c3c;
-    --green: #6a9955;       /* VS Code green */
-    --yellow: #dcdcaa;      /* VS Code yellow */
-    --orange: #ce9178;      /* VS Code orange */
-    --error: #f44747;       /* VS Code error red */
+    /* Light theme */
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --accent: #8b5cf6;
+    --background: #ffffff;
+    --surface: #f3f4f6;
+    --text: #1f2937;
+    --text-secondary: #4b5563;
+    --border: #e5e7eb;
+    --green: #059669;
+    --yellow: #d97706;
+    --orange: #ea580c;
+    --error: #dc2626;
+    --scrollbar-thumb: rgba(203, 213, 225, 0.8);
+    --scrollbar-track: rgba(241, 245, 249, 0.1);
   }
 
-  html, body {
-    @apply h-full overflow-x-hidden bg-background text-text font-mono;
+  :root[class~="dark"] {
+    /* Dark theme (VS Code style) */
+    --primary: #569cd6;
+    --primary-dark: #4a85ba;
+    --accent: #c586c0;
+    --background: #1e1e1e;
+    --surface: #252526;
+    --text: #d4d4d4;
+    --text-secondary: #858585;
+    --border: #3c3c3c;
+    --green: #6a9955;
+    --yellow: #dcdcaa;
+    --orange: #ce9178;
+    --error: #f44747;
+    --scrollbar-thumb: rgba(75, 85, 99, 0.8);
+    --scrollbar-track: rgba(45, 45, 45, 0.1);
+  }
+
+  html {
+    @apply h-full;
+  }
+
+  body {
+    @apply h-full overflow-x-hidden bg-background text-text font-mono transition-colors duration-200;
+    overflow-y: overlay;
+  }
+
+  /* Scrollbar styles */
+  ::-webkit-scrollbar {
+    width: 10px;
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+    border: 2px solid transparent;
+  }
+
+  /* Hide scrollbar when not hovering */
+  ::-webkit-scrollbar-thumb {
+    visibility: hidden;
+  }
+
+  *:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+  }
+
+  /* Firefox scrollbar styles */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) transparent;
+  }
+
+  /* Ensure content doesn't shift when scrollbar appears */
+  html {
+    scrollbar-gutter: stable;
   }
 }
