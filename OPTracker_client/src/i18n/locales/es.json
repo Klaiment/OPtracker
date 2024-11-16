@@ -74,6 +74,13 @@
       "backToLogin": "Volver al Login",
       "success": "Si existe una cuenta con este correo, recibirás instrucciones de recuperación",
       "error": "No se pudo procesar la solicitud de recuperación"
+    },
+    "notification": {
+      "successRegister": "Cuenta creada exitosamente",
+      "successRecovery": "Si existe una cuenta con este correo electrónico, recibirá instrucciones de recuperación.",
+      "successPassword": "La contraseña se cambió correctamente",
+      "error": "Ha ocurrido un error. Por favor inténtalo de nuevo más tarde.",
+      "disconnected": "Has sido desconectado. Por favor inicie sesión nuevamente para continuar."
     }
   },
   "torrents": {

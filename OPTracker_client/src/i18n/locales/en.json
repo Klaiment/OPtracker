@@ -74,6 +74,13 @@
         "backToLogin": "Back to Login",
         "success": "If an account exists with this email, you will receive recovery instructions",
         "error": "Unable to process recovery request"
+      },
+      "notification": {
+        "successRegister": "Account created successfully. You can now log in.",
+        "successRecovery": "If an account exists with this email, you will receive recovery instructions",
+        "successPassword": "Password changed successfully",
+        "error": "An error has occurred. Please try again later.",
+        "disconnected": "You have been logged out. Please log back in to continue."
       }
     },
     "torrents": {
