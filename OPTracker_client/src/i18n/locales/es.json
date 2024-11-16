@@ -232,5 +232,200 @@
     "toggle": "Cambiar tema",
     "dark": "Modo oscuro",
     "light": "Modo claro"
+  },
+  "profile": {
+    "title": "Perfil",
+    "sections": {
+      "info": "Información General",
+      "stats": "Estadísticas",
+      "preferences": "Preferencias"
+    },
+    "fields": {
+      "username": "Usuario",
+      "email": "Correo Electrónico",
+      "joinDate": "Miembro Desde",
+      "avatar": "Foto de Perfil",
+      "uploaded": "Total Subido",
+      "downloaded": "Total Descargado",
+      "ratio": "Ratio",
+      "points": "Puntos",
+      "rank": "Rango de Usuario"
+    },
+    "preferences": {
+      "notifications": "Activar Notificaciones",
+      "privateProfile": "Perfil Privado",
+      "language": "Idioma",
+      "theme": {
+        "title": "Tema",
+        "light": "Modo Claro",
+        "dark": "Modo Oscuro",
+        "system": "Predeterminado del Sistema",
+        "toggle": "Cambiar Tema"
+      }
+    },
+    "actions": {
+      "uploadAvatar": "Subir Foto",
+      "removeAvatar": "Eliminar Foto",
+      "saveChanges": "Guardar Cambios",
+      "changePassword": "Cambiar Contraseña"
+    },
+    "stats": {
+      "title": "Estadísticas",
+      "charts": {
+        "activityTitle": "Actividad de Transferencia",
+        "categoryTitle": "Distribución por Categoría",
+        "ratioTitle": "Evolución del Ratio",
+        "upload": "Subida",
+        "download": "Descarga",
+        "ratio": "Ratio",
+        "timeRanges": {
+          "day": "24 Horas",
+          "week": "Semana",
+          "month": "Mes",
+          "year": "Año"
+        },
+        "categories": {
+          "movies": "Películas",
+          "tvShows": "Series",
+          "music": "Música",
+          "software": "Software",
+          "games": "Juegos",
+          "other": "Otros"
+        },
+        "tooltips": {
+          "transfered": "Transferido",
+          "ratio": "Ratio",
+          "percentage": "Porcentaje"
+        }
+      },
+      "achievements": {
+        "title": "Logros",
+        "uploader": "Mejor Uploader",
+        "seeder": "Seeder Dedicado",
+        "contributor": "Contribuidor Valioso"
+      }
+    },
+    "history": {
+      "title": "Historial de Descargas",
+      "filters": {
+        "status": "Estado",
+        "search": "Buscar",
+        "searchPlaceholder": "Buscar por nombre...",
+        "all": "Todos los Estados"
+      },
+      "table": {
+        "name": "Nombre del Torrent",
+        "date": "Fecha de Descarga",
+        "size": "Tamaño",
+        "uploaded": "Subido",
+        "downloaded": "Descargado",
+        "ratio": "Ratio",
+        "status": "Estado"
+      },
+      "status": {
+        "completed": "Completado",
+        "active": "Activo",
+        "stopped": "Detenido"
+      },
+      "stats": {
+        "totalDownloads": "Descargas Totales",
+        "activeDownloads": "Descargas Activas",
+        "totalData": "Datos Totales",
+        "avgRatio": "Ratio Promedio"
+      },
+      "empty": "No se encontraron descargas",
+      "loading": "Cargando historial de descargas..."
+    },
+    "nav": {
+      "overview": "General",
+      "history": "Historial",
+      "stats": "Estadísticas",
+      "settings": "Configuración"
+    },
+    "settings": {
+      "title": "Configuración del Perfil",
+      "sections": {
+        "security": "Seguridad",
+        "notifications": "Notificaciones",
+        "privacy": "Privacidad",
+        "preferences": "Preferencias",
+        "downloads": "Descargas"
+      },
+      "fields": {
+        "email": "Correo Electrónico",
+        "currentPassword": "Contraseña Actual",
+        "newPassword": "Nueva Contraseña",
+        "confirmPassword": "Confirmar Contraseña",
+        "downloadPath": "Ruta de Descarga Predeterminada",
+        "language": "Idioma",
+        "theme": "Tema"
+      },
+      "notifications": {
+        "emailNotifications": "Notificaciones por Correo",
+        "browserNotifications": "Notificaciones del Navegador",
+        "newsletterSubscription": "Suscripción al Boletín",
+        "downloadComplete": "Notificaciones de Descarga Completada",
+        "newMessage": "Notificaciones de Nuevos Mensajes"
+      },
+      "privacy": {
+        "showProfile": "Mostrar Perfil a Otros",
+        "showStats": "Mostrar Estadísticas",
+        "showHistory": "Mostrar Historial de Descargas",
+        "showOnlineStatus": "Mostrar Estado en Línea"
+      },
+      "preferences": {
+        "theme": {
+          "title": "Tema",
+          "light": "Modo Claro",
+          "dark": "Modo Oscuro",
+          "system": "Predeterminado del Sistema",
+          "toggle": "Cambiar Tema"
+        },
+        "autoStart": "Iniciar Descargas Automáticamente",
+        "defaultCategory": "Categoría Predeterminada",
+        "maxActiveDownloads": "Máximo de Descargas Activas",
+        "maxActiveUploads": "Máximo de Subidas Activas"
+      },
+      "actions": {
+        "save": "Guardar Cambios",
+        "changePassword": "Cambiar Contraseña",
+        "cancel": "Cancelar",
+        "reset": "Restablecer Valores"
+      },
+      "messages": {
+        "saved": "Configuración guardada correctamente",
+        "error": "Error al guardar la configuración",
+        "passwordChanged": "Contraseña cambiada correctamente",
+        "confirmReset": "¿Estás seguro de que quieres restablecer toda la configuración?"
+      },
+      "errors": {
+        "invalidEmail": "Correo electrónico inválido",
+        "passwordMismatch": "Las contraseñas no coinciden",
+        "currentPasswordRequired": "Se requiere la contraseña actual",
+        "invalidPath": "Ruta de descarga inválida"
+      }
+    },
+    "activity": {
+      "title": "Actividad Reciente",
+      "types": {
+        "download": {
+          "title": "Comenzó a descargar",
+          "completed": "Completó la descarga"
+        },
+        "achievement": {
+          "title": "Logro desbloqueado"
+        },
+        "ratio": {
+          "title": "Ratio actualizado",
+          "increased": "Ratio aumentado a {{newRatio}}",
+          "decreased": "Ratio disminuido a {{newRatio}}"
+        },
+        "seeding": {
+          "title": "Compartiendo {{seedingCount}} torrents",
+          "started": "Comenzó a compartir",
+          "stopped": "Dejó de compartir"
+        }
+      }
+    }
   }
 } 
