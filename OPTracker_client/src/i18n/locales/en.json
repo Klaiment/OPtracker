@@ -129,5 +129,96 @@
       "success": "Torrent uploaded successfully",
       "error": "Error uploading torrent"
     }
+  },
+  "admin": {
+    "dashboard": {
+      "title": "Admin Dashboard",
+      "stats": {
+        "totalUsers": "Total Users",
+        "activeUsers": "Active Users",
+        "totalTorrents": "Total Torrents",
+        "activeTorrents": "Active Torrents",
+        "totalDownloads": "Total Downloads",
+        "systemLoad": "System Load"
+      }
+    },
+    "users": {
+      "title": "User Management",
+      "table": {
+        "username": "Username",
+        "email": "Email",
+        "status": "Status",
+        "joined": "Joined",
+        "ratio": "Ratio",
+        "actions": "Actions"
+      },
+      "actions": {
+        "ban": "Ban",
+        "unban": "Unban",
+        "delete": "Delete",
+        "edit": "Edit"
+      },
+      "status": {
+        "active": "Active",
+        "banned": "Banned",
+        "pending": "Pending"
+      }
+    },
+    "torrents": {
+      "title": "Torrent Management",
+      "table": {
+        "name": "Name",
+        "uploader": "Uploader",
+        "size": "Size",
+        "added": "Added",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "actions": {
+        "approve": "Approve",
+        "reject": "Reject",
+        "delete": "Delete",
+        "feature": "Feature"
+      },
+      "status": {
+        "active": "Active",
+        "pending": "Pending",
+        "rejected": "Rejected",
+        "featured": "Featured"
+      }
+    },
+    "settings": {
+      "title": "System Settings",
+      "sections": {
+        "general": {
+          "title": "General Settings",
+          "siteName": "Site Name",
+          "siteDescription": "Site Description",
+          "maintenance": "Maintenance Mode"
+        },
+        "registration": {
+          "title": "Registration Settings",
+          "allowRegistration": "Allow Registration",
+          "requireInvitation": "Require Invitation",
+          "emailVerification": "Email Verification"
+        },
+        "tracker": {
+          "title": "Tracker Settings",
+          "announceInterval": "Announce Interval",
+          "minAnnounceInterval": "Min Announce Interval",
+          "maxPeers": "Max Peers per Torrent"
+        }
+      },
+      "actions": {
+        "save": "Save Changes",
+        "reset": "Reset to Default"
+      }
+    },
+    "nav": {
+      "dashboard": "Dashboard",
+      "users": "Users",
+      "torrents": "Torrents",
+      "settings": "Settings"
+    }
   }
 } 

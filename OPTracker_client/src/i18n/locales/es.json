@@ -129,5 +129,96 @@
       "success": "Torrent subido exitosamente",
       "error": "Error al subir el torrent"
     }
+  },
+  "admin": {
+    "dashboard": {
+      "title": "Panel de Administración",
+      "stats": {
+        "totalUsers": "Total de Usuarios",
+        "activeUsers": "Usuarios Activos",
+        "totalTorrents": "Total de Torrents",
+        "activeTorrents": "Torrents Activos",
+        "totalDownloads": "Descargas Totales",
+        "systemLoad": "Carga del Sistema"
+      }
+    },
+    "users": {
+      "title": "Gestión de Usuarios",
+      "table": {
+        "username": "Usuario",
+        "email": "Correo",
+        "status": "Estado",
+        "joined": "Registrado",
+        "ratio": "Ratio",
+        "actions": "Acciones"
+      },
+      "actions": {
+        "ban": "Banear",
+        "unban": "Desbanear",
+        "delete": "Eliminar",
+        "edit": "Editar"
+      },
+      "status": {
+        "active": "Activo",
+        "banned": "Baneado",
+        "pending": "Pendiente"
+      }
+    },
+    "torrents": {
+      "title": "Gestión de Torrents",
+      "table": {
+        "name": "Nombre",
+        "uploader": "Subido por",
+        "size": "Tamaño",
+        "added": "Añadido",
+        "status": "Estado",
+        "actions": "Acciones"
+      },
+      "actions": {
+        "approve": "Aprobar",
+        "reject": "Rechazar",
+        "delete": "Eliminar",
+        "feature": "Destacar"
+      },
+      "status": {
+        "active": "Activo",
+        "pending": "Pendiente",
+        "rejected": "Rechazado",
+        "featured": "Destacado"
+      }
+    },
+    "settings": {
+      "title": "Configuración del Sistema",
+      "sections": {
+        "general": {
+          "title": "Configuración General",
+          "siteName": "Nombre del Sitio",
+          "siteDescription": "Descripción del Sitio",
+          "maintenance": "Modo Mantenimiento"
+        },
+        "registration": {
+          "title": "Configuración de Registro",
+          "allowRegistration": "Permitir Registro",
+          "requireInvitation": "Requerir Invitación",
+          "emailVerification": "Verificación de Email"
+        },
+        "tracker": {
+          "title": "Configuración del Tracker",
+          "announceInterval": "Intervalo de Anuncio",
+          "minAnnounceInterval": "Intervalo Mínimo de Anuncio",
+          "maxPeers": "Máximo de Peers por Torrent"
+        }
+      },
+      "actions": {
+        "save": "Guardar Cambios",
+        "reset": "Restablecer Valores"
+      }
+    },
+    "nav": {
+      "dashboard": "Panel",
+      "users": "Usuarios",
+      "torrents": "Torrents",
+      "settings": "Configuración"
+    }
   }
 } 
