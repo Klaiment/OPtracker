@@ -1,0 +1,57 @@
+/* Contenedor principal */
+.home-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Contenido centrado */
+.centered-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Separador común */
+.separator {
+  color: var(--border);
+  margin: 0 0.5rem;
+}
+
+/* Footer común */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  width: 100%;
+}
+
+footer p {
+  color: var(--text-secondary);
+  margin: 0 0 1rem 0;
+}
+
+footer nav a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 0 1rem;
+}
+
+footer nav a:hover {
+  color: var(--primary);
+}
+
+/* Diseño responsivo compartido */
+@media (max-width: 768px) {
+  .centered-content {
+    padding: 1rem;
+  }
+} 

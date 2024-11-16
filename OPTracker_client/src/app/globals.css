@@ -3,19 +3,31 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: #569cd6;     /* VS Code blue */
+  --primary-dark: #4a85ba;
+  --accent: #c586c0;      /* VS Code purple */
+  --background: #1e1e1e;  /* VS Code dark background */
+  --surface: #252526;     /* VS Code sidebar */
+  --text: #d4d4d4;        /* VS Code main text */
+  --text-secondary: #858585;
+  --border: #3c3c3c;
+  --green: #6a9955;       /* VS Code green */
+  --yellow: #dcdcaa;      /* VS Code yellow */
+  --orange: #ce9178;      /* VS Code orange */
+  --error: #f44747;       /* VS Code error red */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Reset y estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+  background-color: var(--background);
+  color: var(--text);
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
 }

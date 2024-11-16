@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import SearchBar from '@/components/SearchBar';
-import './styles/home.css';
+import './styles/pages/home.css';
+import './styles/components/shared.css';
 
 export default function Home() {
   return (
