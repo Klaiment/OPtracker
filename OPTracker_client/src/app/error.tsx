@@ -2,14 +2,7 @@
 
 import { useEffect } from 'react';
 import Link from 'next/link';
-import './styles/pages/error.css';
-import './styles/components/shared.css';
 
-/**
- * Error page component
- * Displays when a runtime error occurs
- * Provides options to retry or return home
- */
 export default function Error({
   error,
   reset,
@@ -18,26 +11,33 @@ export default function Error({
   reset: () => void;
 }) {
   useEffect(() => {
-    // Log the error to an error reporting service
     console.error(error);
   }, [error]);
 
   return (
-    <div className="home-container">
-      <main className="centered-content">
-        <div className="error-container">
-          <h1 className="error-code">500</h1>
-          <p className="error-message">Internal Server Error</p>
-          <div className="error-details">
-            <code className="error-path">
+    <div className="min-h-screen flex flex-col bg-background text-text">
+      <main className="flex-1 flex items-center justify-center p-8">
+        <div className="text-center p-8 bg-surface border border-border rounded-lg max-w-2xl w-[90%]">
+          <h1 className="text-6xl text-error leading-none font-mono">500</h1>
+          <p className="text-2xl text-text mt-4 font-medium">Internal Server Error</p>
+          
+          <div className="my-6 p-4 bg-background rounded border border-border">
+            <code className="text-orange font-mono text-sm">
               {error.message || 'Something went wrong!'}
             </code>
           </div>
-          <div className="error-actions">
-            <button onClick={reset} className="error-button">
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+            <button 
+              onClick={reset} 
+              className="px-6 py-3 bg-primary text-background font-semibold rounded hover:bg-primary-dark transition-colors"
+            >
               Try again
             </button>
-            <Link href="/" className="error-button secondary">
+            <Link 
+              href="/" 
+              className="px-6 py-3 border border-border text-text rounded hover:border-primary hover:bg-surface transition-colors"
+            >
               Return Home
             </Link>
           </div>

@@ -1,42 +1,54 @@
 import Link from 'next/link';
 import SearchBar from '@/components/SearchBar';
-import './styles/pages/home.css';
-import './styles/components/shared.css';
 
-/**
- * Home page component
- * Displays the main landing page with search functionality and navigation
- */
 export default function Home() {
   return (
-    <div className="home-container">
-      <main className="centered-content">
-        <div className="main-logo">
-          <h1>OP<span className="tracker-text">Tracker</span></h1>
-          <small className="subtitle">The OverPowered Torrent Tracker</small>
+    <div className="min-h-screen flex flex-col bg-background text-text">
+      <main className="flex-1 flex flex-col items-center justify-center p-8 w-full max-w-7xl mx-auto">
+        <div className="text-center mb-8">
+          <h1 className="text-6xl tracking-tighter text-primary">
+            OP<span className="text-accent">Tracker</span>
+          </h1>
+          <small className="block mt-2 text-text-secondary">
+            The OverPowered Torrent Tracker
+          </small>
         </div>
         
         <SearchBar />
 
-        <nav className="main-nav">
-          <Link href="/browse">Browse Torrents</Link>
-          <span className="separator">|</span>
-          <Link href="/recent">Recent Torrents</Link>
-          <span className="separator">|</span>
-          <Link href="/top100">Top 100</Link>
-          <span className="separator">|</span>
-          <Link href="/stats">Statistics</Link>
+        <nav className="mt-8 text-center">
+          <Link href="/browse" className="px-4 py-2 text-text hover:text-primary transition-colors">
+            Browse Torrents
+          </Link>
+          <span className="text-border mx-2">|</span>
+          <Link href="/recent" className="px-4 py-2 text-text hover:text-primary transition-colors">
+            Recent Torrents
+          </Link>
+          <span className="text-border mx-2">|</span>
+          <Link href="/top100" className="px-4 py-2 text-text hover:text-primary transition-colors">
+            Top 100
+          </Link>
+          <span className="text-border mx-2">|</span>
+          <Link href="/stats" className="px-4 py-2 text-text hover:text-primary transition-colors">
+            Statistics
+          </Link>
         </nav>
       </main>
 
-      <footer>
-        <p>OPTracker - Open Source Torrent Tracker</p>
+      <footer className="text-center p-8 bg-surface border-t border-border">
+        <p className="text-text-secondary mb-4">OPTracker - Open Source Torrent Tracker</p>
         <nav>
-          <Link href="/about">About</Link>
-          <span className="separator">|</span>
-          <Link href="/stats">Statistics</Link>
-          <span className="separator">|</span>
-          <Link href="/api">API</Link>
+          <Link href="/about" className="px-4 text-text hover:text-primary transition-colors">
+            About
+          </Link>
+          <span className="text-border mx-2">|</span>
+          <Link href="/stats" className="px-4 text-text hover:text-primary transition-colors">
+            Statistics
+          </Link>
+          <span className="text-border mx-2">|</span>
+          <Link href="/api" className="px-4 text-text hover:text-primary transition-colors">
+            API
+          </Link>
         </nav>
       </footer>
     </div>
