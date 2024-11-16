@@ -27,6 +27,42 @@
       "api": "API"
     }
   },
+  "auth": {
+    "login": {
+      "title": "Login",
+      "username": "Username",
+      "password": "Password",
+      "submit": "Sign In",
+      "forgotPassword": "Forgot Password?",
+      "noAccount": "Don't have an account?",
+      "register": "Register",
+      "error": "Invalid username or password"
+    },
+    "register": {
+      "title": "Create Account",
+      "username": "Username",
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "submit": "Create Account",
+      "hasAccount": "Already have an account?",
+      "login": "Login",
+      "errors": {
+        "username": "Username must be between 3 and 20 characters",
+        "email": "Please enter a valid email",
+        "password": "Password must be at least 8 characters",
+        "passwordMatch": "Passwords do not match"
+      }
+    },
+    "recovery": {
+      "title": "Password Recovery",
+      "email": "Email",
+      "submit": "Send Recovery Link",
+      "backToLogin": "Back to Login",
+      "success": "If an account exists with this email, you will receive recovery instructions",
+      "error": "Unable to process recovery request"
+    }
+  },
   "errors": {
     "404": {
       "title": "Page Not Found",

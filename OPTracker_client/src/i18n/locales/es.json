@@ -39,5 +39,41 @@
       "retry": "Intentar de nuevo",
       "home": "Volver al Inicio"
     }
+  },
+  "auth": {
+    "login": {
+      "title": "Iniciar Sesión",
+      "username": "Usuario",
+      "password": "Contraseña",
+      "submit": "Entrar",
+      "forgotPassword": "¿Olvidaste tu contraseña?",
+      "noAccount": "¿No tienes cuenta?",
+      "register": "Regístrate",
+      "error": "Usuario o contraseña inválidos"
+    },
+    "register": {
+      "title": "Crear Cuenta",
+      "username": "Usuario",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "confirmPassword": "Confirmar Contraseña",
+      "submit": "Crear Cuenta",
+      "hasAccount": "¿Ya tienes cuenta?",
+      "login": "Iniciar Sesión",
+      "errors": {
+        "username": "El usuario debe tener entre 3 y 20 caracteres",
+        "email": "Por favor ingresa un correo válido",
+        "password": "La contraseña debe tener al menos 8 caracteres",
+        "passwordMatch": "Las contraseñas no coinciden"
+      }
+    },
+    "recovery": {
+      "title": "Recuperar Contraseña",
+      "email": "Correo electrónico",
+      "submit": "Enviar Link de Recuperación",
+      "backToLogin": "Volver al Login",
+      "success": "Si existe una cuenta con este correo, recibirás instrucciones de recuperación",
+      "error": "No se pudo procesar la solicitud de recuperación"
+    }
   }
 } 
