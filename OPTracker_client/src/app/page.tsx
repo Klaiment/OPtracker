@@ -9,6 +9,7 @@
 import Link from 'next/link';
 import SearchBar from '@/components/SearchBar';
 import { useTranslation } from 'react-i18next';
+import WelcomeCard from '@/components/WelcomeCard'
 
 export default function Home() {
   const { t } = useTranslation();
@@ -62,6 +63,8 @@ export default function Home() {
           </Link>
         </nav>
       </footer>
+      
+      <WelcomeCard />
     </div>
   );
 }

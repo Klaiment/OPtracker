@@ -3,6 +3,7 @@ import "./globals.css";
 import ClientWrapper from "@/components/ClientWrapper";
 import Header from "@/components/layout/Header";
 import { ThemeProvider } from "@/contexts/ThemeContext";
+import { Toaster } from 'react-hot-toast'
 
 /**
  * Metadata configuration for the application
@@ -42,6 +43,7 @@ export default function RootLayout({
             {children}
           </ClientWrapper>
         </ThemeProvider>
+        <Toaster position="bottom-right" />
       </body>
     </html>
   );

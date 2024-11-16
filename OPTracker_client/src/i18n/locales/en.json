@@ -427,5 +427,17 @@
           }
         }
       }
+    },
+    "welcome": {
+      "title": "Welcome to OPTracker!",
+      "description": "Your destination for torrent tracking. Explore our collection and find what you're looking for.",
+      "buttons": {
+        "success": "Test Success",
+        "error": "Test Error"
+      },
+      "notifications": {
+        "success": "Welcome to OPTracker!",
+        "error": "Oops! Something went wrong"
+      }
     }
 } 
