@@ -1,10 +1,17 @@
+/**
+ * Admin Dashboard Page
+ * Displays key statistics and provides quick access to important admin tasks
+ * Includes cards for total users, active users, total torrents, active torrents, total downloads, and system load
+ * Allows administrators to monitor the site status and manage various aspects of the platform
+ */
+
 'use client';
 
 import { useTranslation } from 'react-i18next';
 import AdminLayout from '@/components/admin/AdminLayout';
 import StatsCard from '@/components/admin/StatsCard';
 
-// Datos de ejemplo - serán reemplazados por datos reales
+// Example data - will be replaced with real data
 const mockStats = {
   totalUsers: 1250,
   activeUsers: 890,

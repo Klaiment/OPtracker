@@ -1,3 +1,9 @@
+/**
+ * Profile Settings Page
+ * Manages user-specific settings
+ * Includes sections for security, notifications, privacy, and preferences
+ */
+
 'use client';
 
 import { useState } from 'react';
@@ -161,7 +167,7 @@ export default function ProfileSettingsPage() {
                     : t('profile.settings.preferences.theme.dark')}
                 </button>
               </div>
-              {/* ... otras preferencias ... */}
+              {/* ... other preferences ... */}
             </div>
           </section>
 

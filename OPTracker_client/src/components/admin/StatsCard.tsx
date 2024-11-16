@@ -1,3 +1,9 @@
+/**
+ * StatsCard Component
+ * Displays a card with a title, value, trend, and optional icon
+ * Used for displaying key statistics in the admin dashboard
+ */
+
 interface StatsCardProps {
   title: string;
   value: string | number;

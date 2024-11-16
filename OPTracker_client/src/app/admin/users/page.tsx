@@ -1,3 +1,10 @@
+/**
+ * Admin Users Page
+ * Manages user accounts and permissions
+ * Includes a table of users with actions for banning, unbanning, and editing
+ * Allows administrators to manage user accounts and ensure compliance
+ */
+
 'use client';
 
 import { useTranslation } from 'react-i18next';
@@ -5,7 +12,7 @@ import AdminLayout from '@/components/admin/AdminLayout';
 import DataTable from '@/components/admin/DataTable';
 import { User, TableColumn } from '@/types/admin';
 
-// Datos de ejemplo
+// Example data
 const mockUsers: User[] = [
   {
     id: 1,

@@ -1,3 +1,11 @@
+/**
+ * Admin Settings Page
+ * Manages site-wide configuration settings
+ * Includes general settings, registration options, and tracker parameters
+ * Allows administrators to customize the site behavior and appearance
+ */
+
+
 'use client';
 
 import { useState, useRef } from 'react';
@@ -24,7 +32,7 @@ interface Settings {
   };
 }
 
-// Datos de ejemplo
+// Example data
 const defaultSettings: Settings = {
   general: {
     siteName: 'OPTracker',
@@ -53,18 +61,18 @@ export default function AdminSettingsPage() {
   const handleLogoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
-      // Validar el tipo de archivo
+      // Validate file type
       if (!file.type.startsWith('image/')) {
         alert('Please upload an image file');
         return;
       }
 
-      // Crear URL para preview
+      // Create URL for preview
       const url = URL.createObjectURL(file);
       setPreviewUrl(url);
 
-      // En una implementación real, aquí subirías el archivo al servidor
-      // Por ahora solo actualizamos el estado local
+      // In a real implementation, here you would upload the file to the server
+      // For now, we just update the local state
       setSettings(prev => ({
         ...prev,
         general: {

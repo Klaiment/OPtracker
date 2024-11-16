@@ -1,3 +1,9 @@
+/**
+ * Torrent List Page
+ * Displays a list of torrents
+ * Includes filters and a grid of torrent cards
+ */
+
 'use client';
 
 import { useState } from 'react';
@@ -6,7 +12,7 @@ import TorrentCard from '@/components/torrents/TorrentCard';
 import TorrentFilters from '@/components/torrents/TorrentFilters';
 import { Torrent, TorrentFilter } from '@/types/torrent';
 
-// Datos de ejemplo - serán reemplazados por datos reales de la API
+// Example data - will be replaced with real data from the API
 const mockTorrents: Torrent[] = [
   {
     id: '1',
@@ -34,7 +40,7 @@ export default function TorrentListPage() {
 
   const handleFilterChange = (filters: TorrentFilter) => {
     console.log('Filters changed:', filters);
-    // Aquí irá la lógica de filtrado
+    // Here goes the filtering logic
   };
 
   return (

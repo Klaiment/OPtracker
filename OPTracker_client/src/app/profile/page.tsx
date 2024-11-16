@@ -1,3 +1,9 @@
+/**
+ * Profile Page
+ * Displays user profile information and settings
+ * Includes sections for avatar management, user info, statistics, and recent activity
+ */
+
 'use client';
 
 import { useState, useRef } from 'react';
@@ -7,7 +13,7 @@ import { UserProfile } from '@/types/user';
 import ProfileLayout from '@/components/profile/ProfileLayout';
 import RecentActivity from '@/components/profile/RecentActivity';
 
-// Datos de ejemplo
+// Example data
 const mockProfile: UserProfile = {
   id: 1,
   username: 'testuser',
@@ -60,7 +66,7 @@ export default function ProfilePage() {
   return (
     <ProfileLayout title="profile.title">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {/* Sidebar con avatar y stats rápidos */}
+        {/* Sidebar with avatar and quick stats */}
         <div className="space-y-6">
           <div className="bg-surface rounded-lg border border-border p-6">
             <div className="space-y-4">
@@ -125,9 +131,9 @@ export default function ProfilePage() {
           </div>
         </div>
 
-        {/* Contenido principal */}
+        {/* Main content */}
         <div className="md:col-span-2 space-y-6">
-          {/* Información general */}
+          {/* General information */}
           <section className="bg-surface rounded-lg border border-border p-6">
             <h2 className="text-xl font-semibold mb-4">{t('profile.sections.info')}</h2>
             <div className="space-y-4">
@@ -162,7 +168,7 @@ export default function ProfilePage() {
             </div>
           </section>
 
-          {/* Estadísticas detalladas */}
+          {/* Detailed statistics */}
           <section className="bg-surface rounded-lg border border-border p-6">
             <h2 className="text-xl font-semibold mb-4">{t('profile.sections.stats')}</h2>
             <div className="grid grid-cols-2 gap-4">
@@ -181,7 +187,7 @@ export default function ProfilePage() {
             </div>
           </section>
 
-          {/* Preferencias */}
+          {/* Preferences */}
           <section className="bg-surface rounded-lg border border-border p-6">
             <h2 className="text-xl font-semibold mb-4">{t('profile.sections.preferences')}</h2>
             <div className="space-y-4">
@@ -212,7 +218,7 @@ export default function ProfilePage() {
             </div>
           </section>
 
-          {/* Actividad Reciente */}
+          {/* Recent Activity */}
           <RecentActivity />
         </div>
       </div>

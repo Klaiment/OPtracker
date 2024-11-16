@@ -1,3 +1,8 @@
+/**
+ * RecentActivity component
+ * Displays a list of recent activities
+ */
+
 'use client';
 
 import { useTranslation } from 'react-i18next';

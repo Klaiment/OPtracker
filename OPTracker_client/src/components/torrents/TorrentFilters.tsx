@@ -1,3 +1,8 @@
+/**
+ * TorrentFilters component
+ * Displays the torrent filters with category, sort, and search options
+ */
+
 'use client';
 
 import { useTranslation } from 'react-i18next';

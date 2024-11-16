@@ -1,3 +1,8 @@
+/**
+ * ProfileNav component
+ * Displays the profile navigation with links to different sections
+ */
+
 'use client';
 
 import { useTranslation } from 'react-i18next';

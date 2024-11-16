@@ -1,3 +1,8 @@
+/**
+ * Internationalization provider
+ * Handles language switching and loading
+ */
+
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -20,7 +25,7 @@ export default function I18nProvider({ children }: { children: React.ReactNode }
   }, [i18n]);
 
   if (isLoading) {
-    return null; // O un loading spinner si lo prefieres
+    return null; // Or a loading spinner if you prefer
   }
 
   return <>{children}</>;

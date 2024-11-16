@@ -1,3 +1,8 @@
+/**
+ * TorrentInfo component
+ * Displays detailed information about a torrent
+ */
+
 'use client';
 
 import { useTranslation } from 'react-i18next';

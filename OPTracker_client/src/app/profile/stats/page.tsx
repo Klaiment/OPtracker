@@ -1,3 +1,9 @@
+/**
+ * Profile Stats Page
+ * Displays user-specific statistics
+ * Includes charts and achievement cards
+ */
+
 'use client';
 
 import { useTranslation } from 'react-i18next';
@@ -14,7 +20,7 @@ export default function StatsPage() {
   return (
     <ProfileLayout title="profile.stats.title">
       <div className="space-y-6">
-        {/* Gráficos */}
+        {/* Charts */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="bg-surface rounded-lg border border-border p-6">
             <h2 className="text-xl font-semibold mb-4">
@@ -37,7 +43,7 @@ export default function StatsPage() {
             <RatioTrend />
           </div>
 
-          {/* Logros */}
+          {/* Achievements */}
           <div className="bg-surface rounded-lg border border-border p-6">
             <h2 className="text-xl font-semibold mb-4">
               {t('profile.stats.achievements.title')}

@@ -1,3 +1,8 @@
+/**
+ * ActivityChart component
+ * Displays a chart of user activity
+ */
+
 'use client';
 
 import { useTranslation } from 'react-i18next';
@@ -11,7 +16,7 @@ import {
   ResponsiveContainer
 } from 'recharts';
 
-// Datos de ejemplo
+// Example data
 const mockData = [
   { date: '2024-01', upload: 450, download: 200 },
   { date: '2024-02', upload: 300, download: 400 },

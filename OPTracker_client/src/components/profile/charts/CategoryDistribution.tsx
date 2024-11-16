@@ -1,3 +1,8 @@
+/**
+ * CategoryDistribution component
+ * Displays a chart of category distribution
+ */
+
 'use client';
 
 import { useTranslation } from 'react-i18next';
