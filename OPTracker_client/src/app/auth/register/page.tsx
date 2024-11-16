@@ -11,6 +11,9 @@ import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
 import AuthCard from '@/components/auth/AuthCard';
 import AuthInput from '@/components/auth/AuthInput';
+import { config } from "@system/next.config";
+import axios from "axios";
+import {showNotification} from "@/utils/notifications";
 
 export default function RegisterPage() {
   const { t } = useTranslation();
@@ -45,11 +48,19 @@ export default function RegisterPage() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (validateForm()) {
       // Here goes the registration logic
-      console.log('Register:', formData);
+      await axios.post(`${config.WEBSITE_URL}/api/auth/local/register`, {
+        username: formData.username,
+        email: formData.email,
+        password: formData.password
+      }).then((res) => {
+        showNotification.success(t('auth.notification.successRegister'));
+      }).catch((err) => {
+        showNotification.error(t('auth.notification.error'));
+      });
     }
   };
 

@@ -61,6 +61,13 @@
       "backToLogin": "Retour à la connexion",
       "success": "Si un compte existe avec cet email, vous recevrez les instructions de récupération",
       "error": "Impossible de traiter la demande de récupération"
+    },
+    "notification": {
+      "successRegister": "Compte créé avec succès. Vous pouvez maintenant vous connecter.",
+      "successRecovery": "Si un compte existe avec cet email, vous recevrez les instructions de récupération",
+      "successPassword": "Mot de passe changé avec succès",
+      "error": "Une erreur s'est produite. Veuillez réessayer plus tard",
+      "disconnected": "Vous avez été déconnecté. Veuillez vous reconnecter pour continuer."
     }
   },
   "torrents": {
