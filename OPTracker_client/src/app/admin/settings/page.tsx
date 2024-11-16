@@ -1,15 +1,36 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import AdminLayout from '@/components/admin/AdminLayout';
+import Image from 'next/image';
+
+interface Settings {
+  general: {
+    siteName: string;
+    siteDescription: string;
+    maintenance: boolean;
+    logo: string | null;
+  };
+  registration: {
+    allowRegistration: boolean;
+    requireInvitation: boolean;
+    emailVerification: boolean;
+  };
+  tracker: {
+    announceInterval: number;
+    minAnnounceInterval: number;
+    maxPeers: number;
+  };
+}
 
 // Datos de ejemplo
-const defaultSettings = {
+const defaultSettings: Settings = {
   general: {
     siteName: 'OPTracker',
     siteDescription: 'The OverPowered Torrent Tracker',
-    maintenance: false
+    maintenance: false,
+    logo: null
   },
   registration: {
     allowRegistration: true,
@@ -25,7 +46,51 @@ const defaultSettings = {
 
 export default function AdminSettingsPage() {
   const { t } = useTranslation();
-  const [settings, setSettings] = useState(defaultSettings);
+  const [settings, setSettings] = useState<Settings>(defaultSettings);
+  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const handleLogoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      // Validar el tipo de archivo
+      if (!file.type.startsWith('image/')) {
+        alert('Please upload an image file');
+        return;
+      }
+
+      // Crear URL para preview
+      const url = URL.createObjectURL(file);
+      setPreviewUrl(url);
+
+      // En una implementación real, aquí subirías el archivo al servidor
+      // Por ahora solo actualizamos el estado local
+      setSettings(prev => ({
+        ...prev,
+        general: {
+          ...prev.general,
+          logo: url
+        }
+      }));
+    }
+  };
+
+  const handleRemoveLogo = () => {
+    if (previewUrl) {
+      URL.revokeObjectURL(previewUrl);
+    }
+    setPreviewUrl(null);
+    setSettings(prev => ({
+      ...prev,
+      general: {
+        ...prev.general,
+        logo: null
+      }
+    }));
+    if (fileInputRef.current) {
+      fileInputRef.current.value = '';
+    }
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -33,6 +98,10 @@ export default function AdminSettingsPage() {
   };
 
   const handleReset = () => {
+    if (previewUrl) {
+      URL.revokeObjectURL(previewUrl);
+    }
+    setPreviewUrl(null);
     setSettings(defaultSettings);
   };
 
@@ -49,6 +118,53 @@ export default function AdminSettingsPage() {
             {t('admin.settings.sections.general.title')}
           </h3>
           <div className="space-y-4">
+            {/* Logo Upload */}
+            <div>
+              <label className="block text-sm mb-2">
+                {t('admin.settings.sections.general.logo')}
+              </label>
+              <div className="space-y-4">
+                {previewUrl && (
+                  <div className="relative w-64 h-20">
+                    <Image
+                      src={previewUrl}
+                      alt="Site logo"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                )}
+                <div className="flex items-center gap-4">
+                  <input
+                    type="file"
+                    ref={fileInputRef}
+                    onChange={handleLogoChange}
+                    accept="image/*"
+                    className="hidden"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => fileInputRef.current?.click()}
+                    className="px-4 py-2 bg-primary text-background rounded hover:bg-primary-dark transition-colors"
+                  >
+                    {t('admin.settings.sections.general.uploadLogo')}
+                  </button>
+                  {previewUrl && (
+                    <button
+                      type="button"
+                      onClick={handleRemoveLogo}
+                      className="px-4 py-2 border border-border rounded hover:border-error hover:text-error transition-colors"
+                    >
+                      {t('admin.settings.sections.general.removeLogo')}
+                    </button>
+                  )}
+                </div>
+                <p className="text-sm text-text-secondary">
+                  {t('admin.settings.sections.general.logoHelp')}
+                </p>
+              </div>
+            </div>
+
             <div>
               <label className="block text-sm mb-2">
                 {t('admin.settings.sections.general.siteName')}

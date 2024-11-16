@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import ClientWrapper from "@/components/ClientWrapper";
 import Header from "@/components/layout/Header";
+import { ThemeProvider } from "@/contexts/ThemeContext";
 
 /**
  * Metadata configuration for the application
@@ -27,20 +28,20 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
               try {
-                const lng = localStorage.getItem('i18nextLng');
-                if (lng) {
-                  document.documentElement.lang = lng;
-                }
+                const theme = localStorage.getItem('theme') || 'dark';
+                document.documentElement.className = theme;
               } catch {}
             `,
           }}
         />
       </head>
       <body suppressHydrationWarning>
-        <ClientWrapper>
-          <Header />
-          {children}
-        </ClientWrapper>
+        <ThemeProvider>
+          <ClientWrapper>
+            <Header />
+            {children}
+          </ClientWrapper>
+        </ThemeProvider>
       </body>
     </html>
   );
