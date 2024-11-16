@@ -1,3 +1,9 @@
+/**
+ * Error Page
+ * Displays an error message and provides a retry button
+ * Includes a home button to return to the main page
+ */
+
 'use client';
 
 import { useEffect } from 'react';

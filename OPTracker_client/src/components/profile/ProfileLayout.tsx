@@ -1,3 +1,9 @@
+/**
+ * ProfileLayout component
+ * Manages the layout for the profile page
+ * Includes a header with the profile title and navigation
+ */
+
 'use client';
 
 import { useTranslation } from 'react-i18next';

@@ -1,3 +1,7 @@
+/**
+ * Authentication container component
+ */
+
 interface AuthCardProps {
   children: React.ReactNode;
   title: string;

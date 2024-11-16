@@ -1,3 +1,9 @@
+/**
+ * Register page component
+ * Handles new user registration
+ * Includes form validation
+ */
+
 'use client';
 
 import { useState } from 'react';
@@ -42,7 +48,7 @@ export default function RegisterPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (validateForm()) {
-      // Aquí irá la lógica de registro
+      // Here goes the registration logic
       console.log('Register:', formData);
     }
   };

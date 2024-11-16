@@ -1,3 +1,8 @@
+/**
+ * DownloadHistoryTable component
+ * Displays a table of download history
+ */
+
 'use client';
 
 import { useTranslation } from 'react-i18next';

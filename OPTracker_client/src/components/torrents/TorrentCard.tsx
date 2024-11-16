@@ -1,3 +1,8 @@
+/**
+ * TorrentCard component
+ * Displays a torrent card with details
+ */
+
 'use client';
 
 import Link from 'next/link';

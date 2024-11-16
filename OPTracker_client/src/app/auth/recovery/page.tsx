@@ -1,3 +1,9 @@
+/**
+ * Password recovery component
+ * Handles password reset requests
+ * Provides email submission form
+ */
+
 'use client';
 
 import { useState } from 'react';
@@ -13,7 +19,7 @@ export default function RecoveryPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Aquí irá la lógica de recuperación
+    // Here goes the recovery logic
     console.log('Recovery:', email);
     setSubmitted(true);
   };

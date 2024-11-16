@@ -1,3 +1,8 @@
+/**
+ * Footer component
+ * Displays the footer with navigation links and a description
+ */
+
 'use client';
 
 import Link from 'next/link';

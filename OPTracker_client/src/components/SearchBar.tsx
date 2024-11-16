@@ -1,3 +1,8 @@
+/**
+ * SearchBar component
+ * Displays a search bar with category and search options
+ */
+
 'use client';
 
 import { useState } from 'react';

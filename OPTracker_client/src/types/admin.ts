@@ -1,3 +1,9 @@
+/**
+ * Admin Types
+ * Defines the types for the admin dashboard
+ */
+
+// User interface
 export interface User {
   id: number;
   username: string;
@@ -7,6 +13,7 @@ export interface User {
   ratio: number;
 }
 
+// Torrent interface
 export interface AdminTorrent {
   id: number;
   name: string;
@@ -16,6 +23,7 @@ export interface AdminTorrent {
   status: 'active' | 'pending' | 'rejected' | 'featured';
 }
 
+// Table column interface
 export interface TableColumn<T> {
   key: keyof T;
   label: string;

@@ -1,3 +1,8 @@
+/**
+ * ThemeContext
+ * Manages the theme state and toggle functionality
+ */
+
 'use client';
 
 import { createContext, useContext, useEffect, useState } from 'react';

@@ -1,3 +1,8 @@
+/**
+ * RatioTrend component
+ * Displays a chart of ratio trend
+ */
+
 'use client';
 
 import { useTranslation } from 'react-i18next';

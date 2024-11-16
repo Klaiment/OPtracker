@@ -1,3 +1,9 @@
+/**
+ * Torrent Upload Page
+ * Handles torrent upload and submission
+ * Includes form for torrent details and file dropzones for torrent and NFO files
+ */
+
 'use client';
 
 import { useState, useRef } from 'react';
