@@ -1,4 +1,4 @@
-/* Contenedor principal */
+/* Main container */
 .home-container {
   min-height: 100vh;
   display: flex;
@@ -6,7 +6,7 @@
   position: relative;
 }
 
-/* Contenido centrado */
+/* Centered content */
 .centered-content {
   flex: 1;
   display: flex;
@@ -19,13 +19,13 @@
   margin: 0 auto;
 }
 
-/* Separador común */
+/* Common separator */
 .separator {
   color: var(--border);
   margin: 0 0.5rem;
 }
 
-/* Footer común */
+/* Common footer */
 footer {
   text-align: center;
   padding: 2rem;
@@ -49,7 +49,7 @@ footer nav a:hover {
   color: var(--primary);
 }
 
-/* Diseño responsivo compartido */
+/* Shared responsive design */
 @media (max-width: 768px) {
   .centered-content {
     padding: 1rem;

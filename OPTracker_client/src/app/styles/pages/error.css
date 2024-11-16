@@ -1,3 +1,4 @@
+/* Error page container */
 .error-container {
   text-align: center;
   padding: 2rem;
@@ -8,6 +9,7 @@
   width: 90%;
 }
 
+/* Error code display */
 .error-code {
   font-size: 6rem;
   color: var(--error);
@@ -16,6 +18,7 @@
   font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
 }
 
+/* Error message styles */
 .error-message {
   font-size: 1.5rem;
   color: var(--text);
@@ -23,6 +26,7 @@
   font-weight: 500;
 }
 
+/* Error details section */
 .error-details {
   margin: 1.5rem 0;
   padding: 1rem;
@@ -31,12 +35,14 @@
   border: 1px solid var(--border);
 }
 
+/* Error path display */
 .error-path {
   color: var(--orange);
   font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
   font-size: 0.9rem;
 }
 
+/* Action buttons container */
 .error-actions {
   display: flex;
   gap: 1rem;
@@ -44,6 +50,7 @@
   margin-top: 2rem;
 }
 
+/* Error page buttons */
 .error-button {
   padding: 0.75rem 1.5rem;
   background: var(--primary);
@@ -61,6 +68,7 @@
   background: var(--primary-dark);
 }
 
+/* Secondary button variant */
 .error-button.secondary {
   background: transparent;
   border: 1px solid var(--border);
@@ -72,6 +80,7 @@
   border-color: var(--primary);
 }
 
+/* Responsive design for error pages */
 @media (max-width: 768px) {
   .error-code {
     font-size: 4rem;

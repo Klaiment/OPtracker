@@ -17,7 +17,7 @@
   --error: #f44747;       /* VS Code error red */
 }
 
-/* Reset y estilos base */
+/* Base reset and styles */
 * {
   margin: 0;
   padding: 0;

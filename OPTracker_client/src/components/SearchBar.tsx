@@ -3,14 +3,18 @@
 import { useState } from 'react';
 import '../app/styles/components/searchbar.css';
 
+/**
+ * SearchBar component for filtering and searching torrents
+ * Includes category selection and search input
+ */
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [category, setCategory] = useState('all');
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Implementar funcionalidad de búsqueda
-    console.log('Buscando:', searchTerm, 'en categoría:', category);
+    // TODO: Implement search functionality
+    console.log('Searching:', searchTerm, 'in category:', category);
   };
 
   return (

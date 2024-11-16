@@ -2,6 +2,11 @@ import Link from 'next/link';
 import './styles/pages/error.css';
 import './styles/components/shared.css';
 
+/**
+ * Not Found page component
+ * Displays when a requested page doesn't exist
+ * Provides option to return to home page
+ */
 export default function NotFound() {
   return (
     <div className="home-container">

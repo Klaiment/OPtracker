@@ -1,4 +1,4 @@
-/* Estilos del logo */
+/* Logo styles */
 .main-logo {
   text-align: center;
   margin-bottom: 2rem;
@@ -22,7 +22,7 @@
   margin-top: 0.5rem;
 }
 
-/* Estilos de navegación */
+/* Navigation styles */
 .main-nav {
   margin-top: 2rem;
   text-align: center;
@@ -39,7 +39,7 @@
   color: var(--primary);
 }
 
-/* Diseño responsivo */
+/* Responsive design */
 @media (max-width: 768px) {
   .main-logo h1 {
     font-size: 3rem;

@@ -5,6 +5,11 @@ import Link from 'next/link';
 import './styles/pages/error.css';
 import './styles/components/shared.css';
 
+/**
+ * Error page component
+ * Displays when a runtime error occurs
+ * Provides options to retry or return home
+ */
 export default function Error({
   error,
   reset,
@@ -13,6 +18,7 @@ export default function Error({
   reset: () => void;
 }) {
   useEffect(() => {
+    // Log the error to an error reporting service
     console.error(error);
   }, [error]);
 

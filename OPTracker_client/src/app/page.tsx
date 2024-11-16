@@ -3,6 +3,10 @@ import SearchBar from '@/components/SearchBar';
 import './styles/pages/home.css';
 import './styles/components/shared.css';
 
+/**
+ * Home page component
+ * Displays the main landing page with search functionality and navigation
+ */
 export default function Home() {
   return (
     <div className="home-container">
