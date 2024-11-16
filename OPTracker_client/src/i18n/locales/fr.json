@@ -210,5 +210,10 @@
       "torrents": "Torrents",
       "settings": "Paramètres"
     }
+  },
+  "theme": {
+    "toggle": "Changer le thème",
+    "dark": "Mode sombre",
+    "light": "Mode clair"
   }
 } 

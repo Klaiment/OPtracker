@@ -223,5 +223,10 @@
       "torrents": "Torrents",
       "settings": "Settings"
     }
+  },
+  "theme": {
+    "toggle": "Toggle theme",
+    "dark": "Dark mode",
+    "light": "Light mode"
   }
 } 
