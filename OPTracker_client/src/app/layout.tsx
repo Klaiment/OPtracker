@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ClientWrapper from "@/components/ClientWrapper";
+import Header from "@/components/layout/Header";
 
 /**
  * Metadata configuration for the application
@@ -21,8 +22,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                const lng = localStorage.getItem('i18nextLng');
+                if (lng) {
+                  document.documentElement.lang = lng;
+                }
+              } catch {}
+            `,
+          }}
+        />
+      </head>
       <body suppressHydrationWarning>
         <ClientWrapper>
+          <Header />
           {children}
         </ClientWrapper>
       </body>

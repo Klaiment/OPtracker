@@ -1,0 +1,43 @@
+{
+  "home": {
+    "title": "OPTracker",
+    "subtitle": "The OverPowered Torrent Tracker",
+    "search": {
+      "placeholder": "Buscar torrents...",
+      "button": "Buscar",
+      "categories": {
+        "all": "Todos",
+        "audio": "Audio",
+        "video": "Video",
+        "applications": "Aplicaciones",
+        "games": "Juegos",
+        "other": "Otros"
+      }
+    },
+    "nav": {
+      "browse": "Explorar Torrents",
+      "recent": "Torrents Recientes",
+      "top": "Top 100",
+      "stats": "Estadísticas"
+    },
+    "footer": {
+      "description": "OPTracker - Open Source Torrent Tracker",
+      "about": "Acerca de",
+      "stats": "Estadísticas",
+      "api": "API"
+    }
+  },
+  "errors": {
+    "404": {
+      "title": "Página No Encontrada",
+      "message": "No se pudo encontrar el recurso solicitado",
+      "home": "Volver al Inicio"
+    },
+    "500": {
+      "title": "Error Interno del Servidor",
+      "message": "¡Algo salió mal!",
+      "retry": "Intentar de nuevo",
+      "home": "Volver al Inicio"
+    }
+  }
+} 

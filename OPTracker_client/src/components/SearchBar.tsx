@@ -1,10 +1,12 @@
 'use client';
 
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export default function SearchBar() {
   const [searchTerm, setSearchTerm] = useState('');
   const [category, setCategory] = useState('all');
+  const { t } = useTranslation();
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -19,16 +21,16 @@ export default function SearchBar() {
           onChange={(e) => setCategory(e.target.value)}
           className="p-2 bg-background text-text border border-border rounded font-mono"
         >
-          <option value="all">All</option>
-          <option value="audio">Audio</option>
-          <option value="video">Video</option>
-          <option value="applications">Applications</option>
-          <option value="games">Games</option>
-          <option value="other">Other</option>
+          <option value="all">{t('home.search.categories.all')}</option>
+          <option value="audio">{t('home.search.categories.audio')}</option>
+          <option value="video">{t('home.search.categories.video')}</option>
+          <option value="applications">{t('home.search.categories.applications')}</option>
+          <option value="games">{t('home.search.categories.games')}</option>
+          <option value="other">{t('home.search.categories.other')}</option>
         </select>
         <input
           type="text"
-          placeholder="Search torrents..."
+          placeholder={t('home.search.placeholder')}
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           className="flex-1 p-2 bg-background text-text border border-border rounded font-mono"
@@ -37,7 +39,7 @@ export default function SearchBar() {
           type="submit"
           className="px-6 py-2 bg-primary text-background font-semibold rounded hover:bg-primary-dark transition-colors"
         >
-          Search
+          {t('home.search.button')}
         </button>
       </form>
     </div>
