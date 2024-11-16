@@ -427,5 +427,17 @@
         }
       }
     }
+  },
+  "welcome": {
+    "title": "¡Bienvenido a OPTracker!",
+    "description": "Tu destino para el seguimiento de torrents. Explora nuestra colección y encuentra lo que buscas.",
+    "buttons": {
+      "success": "Probar Éxito",
+      "error": "Probar Error"
+    },
+    "notifications": {
+      "success": "¡Bienvenido a OPTracker!",
+      "error": "¡Ups! Algo salió mal"
+    }
   }
 } 
