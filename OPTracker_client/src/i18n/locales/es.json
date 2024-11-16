@@ -115,6 +115,7 @@
       "title": "Subir Torrent",
       "form": {
         "torrentFile": "Archivo Torrent",
+        "nfoFile": "Archivo NFO (Opcional)",
         "name": "Nombre",
         "description": "Descripción",
         "category": "Categoría",
@@ -124,7 +125,9 @@
       },
       "dropzone": {
         "text": "Arrastra el archivo torrent aquí o haz clic para seleccionar",
-        "accepted": "Solo archivos .torrent"
+        "nfoText": "Arrastra el archivo NFO aquí o haz clic para seleccionar",
+        "accepted": "Solo archivos .torrent",
+        "nfoAccepted": "Solo archivos .nfo"
       },
       "success": "Torrent subido exitosamente",
       "error": "Error al subir el torrent"

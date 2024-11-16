@@ -1,7 +1,62 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+
+interface FileDropzoneProps {
+  file: File | null;
+  setFile: (file: File | null) => void;
+  accept: string;
+  dropzoneText: string;
+  acceptedText: string;
+}
+
+function FileDropzone({ file, setFile, accept, dropzoneText, acceptedText }: FileDropzoneProps) {
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const handleDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    const droppedFile = e.dataTransfer.files[0];
+    if (droppedFile?.name.endsWith(accept)) {
+      setFile(droppedFile);
+    }
+  };
+
+  const handleClick = () => {
+    fileInputRef.current?.click();
+  };
+
+  return (
+    <div 
+      className="border-2 border-dashed border-border rounded p-8 text-center
+                 hover:border-primary transition-colors cursor-pointer"
+      onDragOver={(e) => e.preventDefault()}
+      onDrop={handleDrop}
+      onClick={handleClick}
+    >
+      <input
+        type="file"
+        ref={fileInputRef}
+        accept={accept}
+        className="hidden"
+        onChange={(e) => {
+          const file = e.target.files?.[0];
+          if (file) setFile(file);
+        }}
+      />
+      {file ? (
+        <span className="text-primary">{file.name}</span>
+      ) : (
+        <>
+          <p>{dropzoneText}</p>
+          <p className="text-text-secondary text-sm mt-2">
+            {acceptedText}
+          </p>
+        </>
+      )}
+    </div>
+  );
+}
 
 export default function TorrentUploadPage() {
   const { t } = useTranslation();
@@ -12,12 +67,14 @@ export default function TorrentUploadPage() {
     tags: '',
     visibility: 'public'
   });
-  const [file, setFile] = useState<File | null>(null);
+  const [torrentFile, setTorrentFile] = useState<File | null>(null);
+  const [nfoFile, setNfoFile] = useState<File | null>(null);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Form data:', formData);
-    console.log('File:', file);
+    console.log('Torrent file:', torrentFile);
+    console.log('NFO file:', nfoFile);
   };
 
   return (
@@ -28,36 +85,35 @@ export default function TorrentUploadPage() {
         </h1>
 
         <form onSubmit={handleSubmit} className="bg-surface p-6 rounded border border-border">
-          <div className="mb-6">
-            <label className="block text-text mb-2">
-              {t('torrents.upload.form.torrentFile')}
-            </label>
-            <div 
-              className="border-2 border-dashed border-border rounded p-8 text-center
-                         hover:border-primary transition-colors cursor-pointer"
-              onDragOver={(e) => e.preventDefault()}
-              onDrop={(e) => {
-                e.preventDefault();
-                const file = e.dataTransfer.files[0];
-                if (file?.name.endsWith('.torrent')) {
-                  setFile(file);
-                }
-              }}
-            >
-              {file ? (
-                <span className="text-primary">{file.name}</span>
-              ) : (
-                <>
-                  <p>{t('torrents.upload.dropzone.text')}</p>
-                  <p className="text-text-secondary text-sm mt-2">
-                    {t('torrents.upload.dropzone.accepted')}
-                  </p>
-                </>
-              )}
+          <div className="space-y-6">
+            {/* Torrent File Dropzone */}
+            <div>
+              <label className="block text-text mb-2">
+                {t('torrents.upload.form.torrentFile')}
+              </label>
+              <FileDropzone
+                file={torrentFile}
+                setFile={setTorrentFile}
+                accept=".torrent"
+                dropzoneText={t('torrents.upload.dropzone.text')}
+                acceptedText={t('torrents.upload.dropzone.accepted')}
+              />
             </div>
-          </div>
 
-          <div className="space-y-4">
+            {/* NFO File Dropzone */}
+            <div>
+              <label className="block text-text mb-2">
+                {t('torrents.upload.form.nfoFile')}
+              </label>
+              <FileDropzone
+                file={nfoFile}
+                setFile={setNfoFile}
+                accept=".nfo"
+                dropzoneText={t('torrents.upload.dropzone.nfoText')}
+                acceptedText={t('torrents.upload.dropzone.nfoAccepted')}
+              />
+            </div>
+
             <div>
               <label className="block text-text mb-2">
                 {t('torrents.upload.form.name')}

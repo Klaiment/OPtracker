@@ -115,6 +115,7 @@
       "title": "Upload Torrent",
       "form": {
         "torrentFile": "Torrent File",
+        "nfoFile": "NFO File (Optional)",
         "name": "Name",
         "description": "Description",
         "category": "Category",
@@ -124,7 +125,9 @@
       },
       "dropzone": {
         "text": "Drop torrent file here or click to select",
-        "accepted": ".torrent files only"
+        "nfoText": "Drop NFO file here or click to select",
+        "accepted": ".torrent files only",
+        "nfoAccepted": ".nfo files only"
       },
       "success": "Torrent uploaded successfully",
       "error": "Error uploading torrent"
