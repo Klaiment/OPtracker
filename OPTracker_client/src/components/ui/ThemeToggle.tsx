@@ -1,3 +1,8 @@
+/**
+ * ThemeToggle component
+ * Displays a theme toggle button with a sun and moon icon
+ */
+
 'use client';
 
 import { useTheme } from '@/contexts/ThemeContext';

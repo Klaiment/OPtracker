@@ -1,3 +1,9 @@
+/**
+ * Download History Page
+ * Displays user's download history
+ * Includes filters and statistics
+ */
+
 'use client';
 
 import { useState } from 'react';
@@ -6,7 +12,7 @@ import ProfileLayout from '@/components/profile/ProfileLayout';
 import DownloadHistoryTable from '@/components/profile/DownloadHistoryTable';
 import { DownloadHistory } from '@/types/user';
 
-// Datos de ejemplo
+// Example data
 const mockDownloads: DownloadHistory[] = [
   {
     id: 1,
@@ -28,7 +34,7 @@ const mockDownloads: DownloadHistory[] = [
     ratio: 0.5,
     status: 'active'
   },
-  // Más datos de ejemplo...
+  // More example data...
 ];
 
 export default function DownloadHistoryPage() {
@@ -45,7 +51,7 @@ export default function DownloadHistoryPage() {
   return (
     <ProfileLayout title="profile.history.title">
       <div className="space-y-6">
-        {/* Filtros */}
+        {/* Filters */}
         <div className="bg-surface rounded-lg border border-border p-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
@@ -78,7 +84,7 @@ export default function DownloadHistoryPage() {
           </div>
         </div>
 
-        {/* Resumen de estadísticas */}
+        {/* Summary of statistics */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           <div className="bg-surface rounded-lg border border-border p-4">
             <div className="text-text-secondary text-sm">
@@ -114,7 +120,7 @@ export default function DownloadHistoryPage() {
           </div>
         </div>
 
-        {/* Tabla de historial */}
+        {/* Table of history */}
         <div className="bg-surface rounded-lg border border-border overflow-hidden">
           <DownloadHistoryTable downloads={filteredDownloads} />
         </div>

@@ -1,3 +1,9 @@
+/**
+ * Login page component
+ * Handles user authentication
+ * Provides login form and navigation
+ */
+
 'use client';
 
 import { useState } from 'react';
@@ -15,7 +21,7 @@ export default function LoginPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Aquí irá la lógica de login
+    // Here goes the login logic
     console.log('Login:', formData);
   };
 

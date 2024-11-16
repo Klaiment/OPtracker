@@ -1,3 +1,8 @@
+/**
+ * PasswordChangeModal component
+ * Displays a modal for changing the user's password
+ */
+
 'use client';
 
 import { useState } from 'react';

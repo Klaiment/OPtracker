@@ -1,3 +1,9 @@
+/**
+ * Home Page
+ * Displays the main page with search bar, navigation, and footer
+ * Includes a search bar for quick search and navigation links
+ */
+
 'use client';
 
 import Link from 'next/link';

@@ -1,3 +1,8 @@
+/**
+ * LanguageSelector component
+ * Displays a language selector with options for English, Spanish, and French
+ */
+
 'use client';
 
 import React from 'react';

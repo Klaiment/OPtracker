@@ -1,3 +1,8 @@
+/**
+ * Internationalization configuration
+ * Handles language switching and loading
+ */
+
 'use client';
 
 import i18n from 'i18next';
@@ -5,12 +10,12 @@ import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import Backend from 'i18next-http-backend';
 
-// Importamos los archivos de traducción
+// Importing translation files
 import en from './locales/en.json';
 import es from './locales/es.json';
 import fr from './locales/fr.json';
 
-// Obtener el idioma guardado
+// Getting the saved language
 const getSavedLanguage = () => {
   if (typeof window !== 'undefined') {
     return localStorage.getItem('i18nextLng') || 'en';
@@ -18,7 +23,7 @@ const getSavedLanguage = () => {
   return 'en';
 };
 
-// Evitamos inicializar i18next múltiples veces
+// Avoid initializing i18next multiple times
 if (!i18n.isInitialized) {
   i18n
     .use(Backend)

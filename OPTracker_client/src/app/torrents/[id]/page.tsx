@@ -1,10 +1,16 @@
+/**
+ * Torrent Detail Page
+ * Displays detailed information about a specific torrent
+ * Includes torrent information and download button
+ */
+
 'use client';
 
 import { useTranslation } from 'react-i18next';
 import TorrentInfo from '@/components/torrents/TorrentInfo';
 import { useParams } from 'next/navigation';
 
-// Datos de ejemplo - serán reemplazados por datos reales de la API
+// Example data - will be replaced with real data from the API
 const mockTorrent = {
   id: '1',
   name: 'Ubuntu 22.04 LTS',
@@ -23,7 +29,7 @@ export default function TorrentDetailPage() {
   const params = useParams();
   const id = params?.id as string;
 
-  // Aquí iría la lógica para obtener los datos del torrent usando el ID
+  // Here goes the logic to get the torrent data using the ID
   console.log('Torrent ID:', id);
 
   return (

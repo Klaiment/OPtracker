@@ -1,3 +1,8 @@
+/**
+ * AchievementCard component
+ * Displays an achievement card with an icon and details
+ */
+
 'use client';
 
 import { useTranslation } from 'react-i18next';

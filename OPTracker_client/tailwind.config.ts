@@ -1,3 +1,8 @@
+/**
+ * Tailwind CSS configuration
+ * Manages the styling of the application
+ */
+
 import type { Config } from "tailwindcss";
 
 export default {

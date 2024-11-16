@@ -1,3 +1,9 @@
+/**
+ * User Types
+ * Defines the types for the user profile page
+ */
+
+// User profile interface
 export interface UserProfile {
   id: number;
   username: string;
@@ -19,6 +25,7 @@ export interface UserProfile {
   };
 }
 
+// Download history interface
 export interface DownloadHistory {
   id: number;
   torrentName: string;
@@ -30,12 +37,14 @@ export interface DownloadHistory {
   status: 'completed' | 'active' | 'stopped';
 }
 
+// Achievement interface
 export interface Achievement {
   type: 'uploader' | 'seeder' | 'contributor';
   date: string;
   value: string;
 }
 
+// Mock achievements
 export const mockAchievements: Achievement[] = [
   {
     type: 'uploader',

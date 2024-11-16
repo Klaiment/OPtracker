@@ -1,3 +1,9 @@
+/**
+ * DataTable Component
+ * Displays a table with data and optional actions
+ * Includes a header with column labels and an optional actions column
+ */
+
 import { TableColumn } from '@/types/admin';
 
 interface DataTableProps<T> {

@@ -1,3 +1,10 @@
+/**
+ * Admin Torrents Page
+ * Manages torrent uploads and moderation
+ * Includes a table of torrents with actions for approval, rejection, and deletion
+ * Allows administrators to manage the torrent upload process and ensure compliance
+ */
+
 'use client';
 
 import { useTranslation } from 'react-i18next';
@@ -5,7 +12,7 @@ import AdminLayout from '@/components/admin/AdminLayout';
 import DataTable from '@/components/admin/DataTable';
 import { AdminTorrent, TableColumn } from '@/types/admin';
 
-// Datos de ejemplo
+// Example data
 const mockTorrents: AdminTorrent[] = [
   {
     id: 1,
