@@ -1,0 +1,227 @@
+{
+  "home": {
+    "title": "OPTracker",
+    "subtitle": "The OverPowered Torrent Tracker",
+    "search": {
+      "placeholder": "Search torrents...",
+      "button": "Search",
+      "categories": {
+        "all": "All",
+        "audio": "Audio",
+        "video": "Video",
+        "applications": "Applications",
+        "games": "Games",
+        "other": "Other"
+      }
+    },
+    "nav": {
+      "browse": "Browse Torrents",
+      "recent": "Recent Torrents",
+      "top": "Top 100",
+      "stats": "Statistics"
+    },
+    "footer": {
+      "description": "OPTracker - Open Source Torrent Tracker",
+      "about": "About",
+      "stats": "Statistics",
+      "api": "API"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Login",
+      "username": "Username",
+      "password": "Password",
+      "submit": "Sign In",
+      "forgotPassword": "Forgot Password?",
+      "noAccount": "Don't have an account?",
+      "register": "Register",
+      "error": "Invalid username or password"
+    },
+    "register": {
+      "title": "Create Account",
+      "username": "Username",
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "submit": "Create Account",
+      "hasAccount": "Already have an account?",
+      "login": "Login",
+      "errors": {
+        "username": "Username must be between 3 and 20 characters",
+        "email": "Please enter a valid email",
+        "password": "Password must be at least 8 characters",
+        "passwordMatch": "Passwords do not match"
+      }
+    },
+    "recovery": {
+      "title": "Password Recovery",
+      "email": "Email",
+      "submit": "Send Recovery Link",
+      "backToLogin": "Back to Login",
+      "success": "If an account exists with this email, you will receive recovery instructions",
+      "error": "Unable to process recovery request"
+    }
+  },
+  "errors": {
+    "404": {
+      "title": "Page Not Found",
+      "message": "Could not find requested resource",
+      "home": "Return Home"
+    },
+    "500": {
+      "title": "Internal Server Error",
+      "message": "Something went wrong!",
+      "retry": "Try again",
+      "home": "Return Home"
+    }
+  },
+  "torrents": {
+    "list": {
+      "title": "Browse Torrents",
+      "filters": {
+        "title": "Filters",
+        "category": "Category",
+        "status": "Status",
+        "sort": "Sort by",
+        "order": {
+          "newest": "Newest",
+          "oldest": "Oldest",
+          "mostDownloaded": "Most Downloaded",
+          "mostSeeded": "Most Seeded",
+          "largest": "Largest Size",
+          "smallest": "Smallest Size"
+        }
+      },
+      "noResults": "No torrents found",
+      "loading": "Loading torrents..."
+    },
+    "detail": {
+      "information": "Information",
+      "files": "Files",
+      "comments": "Comments",
+      "peers": "Peers",
+      "download": "Download",
+      "stats": {
+        "size": "Size",
+        "added": "Added",
+        "seeders": "Seeders",
+        "leechers": "Leechers",
+        "completed": "Completed",
+        "ratio": "Ratio"
+      }
+    },
+    "upload": {
+      "title": "Upload Torrent",
+      "form": {
+        "torrentFile": "Torrent File",
+        "nfoFile": "NFO File (Optional)",
+        "name": "Name",
+        "description": "Description",
+        "category": "Category",
+        "tags": "Tags",
+        "visibility": "Visibility",
+        "submit": "Upload"
+      },
+      "dropzone": {
+        "text": "Drop torrent file here or click to select",
+        "nfoText": "Drop NFO file here or click to select",
+        "accepted": ".torrent files only",
+        "nfoAccepted": ".nfo files only"
+      },
+      "success": "Torrent uploaded successfully",
+      "error": "Error uploading torrent"
+    }
+  },
+  "admin": {
+    "dashboard": {
+      "title": "Admin Dashboard",
+      "stats": {
+        "totalUsers": "Total Users",
+        "activeUsers": "Active Users",
+        "totalTorrents": "Total Torrents",
+        "activeTorrents": "Active Torrents",
+        "totalDownloads": "Total Downloads",
+        "systemLoad": "System Load"
+      }
+    },
+    "users": {
+      "title": "User Management",
+      "table": {
+        "username": "Username",
+        "email": "Email",
+        "status": "Status",
+        "joined": "Joined",
+        "ratio": "Ratio",
+        "actions": "Actions"
+      },
+      "actions": {
+        "ban": "Ban",
+        "unban": "Unban",
+        "delete": "Delete",
+        "edit": "Edit"
+      },
+      "status": {
+        "active": "Active",
+        "banned": "Banned",
+        "pending": "Pending"
+      }
+    },
+    "torrents": {
+      "title": "Torrent Management",
+      "table": {
+        "name": "Name",
+        "uploader": "Uploader",
+        "size": "Size",
+        "added": "Added",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "actions": {
+        "approve": "Approve",
+        "reject": "Reject",
+        "delete": "Delete",
+        "feature": "Feature"
+      },
+      "status": {
+        "active": "Active",
+        "pending": "Pending",
+        "rejected": "Rejected",
+        "featured": "Featured"
+      }
+    },
+    "settings": {
+      "title": "System Settings",
+      "sections": {
+        "general": {
+          "title": "General Settings",
+          "siteName": "Site Name",
+          "siteDescription": "Site Description",
+          "maintenance": "Maintenance Mode"
+        },
+        "registration": {
+          "title": "Registration Settings",
+          "allowRegistration": "Allow Registration",
+          "requireInvitation": "Require Invitation",
+          "emailVerification": "Email Verification"
+        },
+        "tracker": {
+          "title": "Tracker Settings",
+          "announceInterval": "Announce Interval",
+          "minAnnounceInterval": "Min Announce Interval",
+          "maxPeers": "Max Peers per Torrent"
+        }
+      },
+      "actions": {
+        "save": "Save Changes",
+        "reset": "Reset to Default"
+      }
+    },
+    "nav": {
+      "dashboard": "Dashboard",
+      "users": "Users",
+      "torrents": "Torrents",
+      "settings": "Settings"
+    }
+  }
+} 

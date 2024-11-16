@@ -1,0 +1,227 @@
+{
+  "home": {
+    "title": "OPTracker",
+    "subtitle": "El Rastreador de Torrents OverPowered",
+    "search": {
+      "placeholder": "Buscar torrents...",
+      "button": "Buscar",
+      "categories": {
+        "all": "Todos",
+        "audio": "Audio",
+        "video": "Video",
+        "applications": "Aplicaciones",
+        "games": "Juegos",
+        "other": "Otros"
+      }
+    },
+    "nav": {
+      "browse": "Explorar Torrents",
+      "recent": "Torrents Recientes",
+      "top": "Top 100",
+      "stats": "Estadísticas"
+    },
+    "footer": {
+      "description": "OPTracker - Rastreador de Torrents de Código Abierto",
+      "about": "Acerca de",
+      "stats": "Estadísticas",
+      "api": "API"
+    }
+  },
+  "errors": {
+    "404": {
+      "title": "Página No Encontrada",
+      "message": "No se pudo encontrar el recurso solicitado",
+      "home": "Volver al Inicio"
+    },
+    "500": {
+      "title": "Error Interno del Servidor",
+      "message": "¡Algo salió mal!",
+      "retry": "Intentar de nuevo",
+      "home": "Volver al Inicio"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Iniciar Sesión",
+      "username": "Usuario",
+      "password": "Contraseña",
+      "submit": "Entrar",
+      "forgotPassword": "¿Olvidaste tu contraseña?",
+      "noAccount": "¿No tienes cuenta?",
+      "register": "Regístrate",
+      "error": "Usuario o contraseña inválidos"
+    },
+    "register": {
+      "title": "Crear Cuenta",
+      "username": "Usuario",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "confirmPassword": "Confirmar Contraseña",
+      "submit": "Crear Cuenta",
+      "hasAccount": "¿Ya tienes cuenta?",
+      "login": "Iniciar Sesión",
+      "errors": {
+        "username": "El usuario debe tener entre 3 y 20 caracteres",
+        "email": "Por favor ingresa un correo válido",
+        "password": "La contraseña debe tener al menos 8 caracteres",
+        "passwordMatch": "Las contraseñas no coinciden"
+      }
+    },
+    "recovery": {
+      "title": "Recuperar Contraseña",
+      "email": "Correo electrónico",
+      "submit": "Enviar Link de Recuperación",
+      "backToLogin": "Volver al Login",
+      "success": "Si existe una cuenta con este correo, recibirás instrucciones de recuperación",
+      "error": "No se pudo procesar la solicitud de recuperación"
+    }
+  },
+  "torrents": {
+    "list": {
+      "title": "Explorar Torrents",
+      "filters": {
+        "title": "Filtros",
+        "category": "Categoría",
+        "status": "Estado",
+        "sort": "Ordenar por",
+        "order": {
+          "newest": "Más recientes",
+          "oldest": "Más antiguos",
+          "mostDownloaded": "Más descargados",
+          "mostSeeded": "Más seedeados",
+          "largest": "Mayor tamaño",
+          "smallest": "Menor tamaño"
+        }
+      },
+      "noResults": "No se encontraron torrents",
+      "loading": "Cargando torrents..."
+    },
+    "detail": {
+      "information": "Información",
+      "files": "Archivos",
+      "comments": "Comentarios",
+      "peers": "Peers",
+      "download": "Descargar",
+      "stats": {
+        "size": "Tamaño",
+        "added": "Añadido",
+        "seeders": "Seeders",
+        "leechers": "Leechers",
+        "completed": "Completados",
+        "ratio": "Ratio"
+      }
+    },
+    "upload": {
+      "title": "Subir Torrent",
+      "form": {
+        "torrentFile": "Archivo Torrent",
+        "nfoFile": "Archivo NFO (Opcional)",
+        "name": "Nombre",
+        "description": "Descripción",
+        "category": "Categoría",
+        "tags": "Etiquetas",
+        "visibility": "Visibilidad",
+        "submit": "Subir"
+      },
+      "dropzone": {
+        "text": "Arrastra el archivo torrent aquí o haz clic para seleccionar",
+        "nfoText": "Arrastra el archivo NFO aquí o haz clic para seleccionar",
+        "accepted": "Solo archivos .torrent",
+        "nfoAccepted": "Solo archivos .nfo"
+      },
+      "success": "Torrent subido exitosamente",
+      "error": "Error al subir el torrent"
+    }
+  },
+  "admin": {
+    "dashboard": {
+      "title": "Panel de Administración",
+      "stats": {
+        "totalUsers": "Total de Usuarios",
+        "activeUsers": "Usuarios Activos",
+        "totalTorrents": "Total de Torrents",
+        "activeTorrents": "Torrents Activos",
+        "totalDownloads": "Descargas Totales",
+        "systemLoad": "Carga del Sistema"
+      }
+    },
+    "users": {
+      "title": "Gestión de Usuarios",
+      "table": {
+        "username": "Usuario",
+        "email": "Correo",
+        "status": "Estado",
+        "joined": "Registrado",
+        "ratio": "Ratio",
+        "actions": "Acciones"
+      },
+      "actions": {
+        "ban": "Banear",
+        "unban": "Desbanear",
+        "delete": "Eliminar",
+        "edit": "Editar"
+      },
+      "status": {
+        "active": "Activo",
+        "banned": "Baneado",
+        "pending": "Pendiente"
+      }
+    },
+    "torrents": {
+      "title": "Gestión de Torrents",
+      "table": {
+        "name": "Nombre",
+        "uploader": "Subido por",
+        "size": "Tamaño",
+        "added": "Añadido",
+        "status": "Estado",
+        "actions": "Acciones"
+      },
+      "actions": {
+        "approve": "Aprobar",
+        "reject": "Rechazar",
+        "delete": "Eliminar",
+        "feature": "Destacar"
+      },
+      "status": {
+        "active": "Activo",
+        "pending": "Pendiente",
+        "rejected": "Rechazado",
+        "featured": "Destacado"
+      }
+    },
+    "settings": {
+      "title": "Configuración del Sistema",
+      "sections": {
+        "general": {
+          "title": "Configuración General",
+          "siteName": "Nombre del Sitio",
+          "siteDescription": "Descripción del Sitio",
+          "maintenance": "Modo Mantenimiento"
+        },
+        "registration": {
+          "title": "Configuración de Registro",
+          "allowRegistration": "Permitir Registro",
+          "requireInvitation": "Requerir Invitación",
+          "emailVerification": "Verificación de Email"
+        },
+        "tracker": {
+          "title": "Configuración del Tracker",
+          "announceInterval": "Intervalo de Anuncio",
+          "minAnnounceInterval": "Intervalo Mínimo de Anuncio",
+          "maxPeers": "Máximo de Peers por Torrent"
+        }
+      },
+      "actions": {
+        "save": "Guardar Cambios",
+        "reset": "Restablecer Valores"
+      }
+    },
+    "nav": {
+      "dashboard": "Panel",
+      "users": "Usuarios",
+      "torrents": "Torrents",
+      "settings": "Configuración"
+    }
+  }
+} 

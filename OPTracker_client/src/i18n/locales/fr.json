@@ -1,0 +1,214 @@
+{
+  "home": {
+    "title": "OPTracker",
+    "subtitle": "Le Tracker Torrent Surpuissant",
+    "search": {
+      "placeholder": "Rechercher des torrents...",
+      "button": "Rechercher",
+      "categories": {
+        "all": "Tous",
+        "audio": "Audio",
+        "video": "Vidéo",
+        "applications": "Applications",
+        "games": "Jeux",
+        "other": "Autres"
+      }
+    },
+    "nav": {
+      "browse": "Parcourir les Torrents",
+      "recent": "Torrents Récents",
+      "top": "Top 100",
+      "stats": "Statistiques"
+    },
+    "footer": {
+      "description": "OPTracker - Tracker Torrent Open Source",
+      "about": "À propos",
+      "stats": "Statistiques",
+      "api": "API"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Connexion",
+      "username": "Nom d'utilisateur",
+      "password": "Mot de passe",
+      "submit": "Se connecter",
+      "forgotPassword": "Mot de passe oublié ?",
+      "noAccount": "Pas encore de compte ?",
+      "register": "S'inscrire",
+      "error": "Nom d'utilisateur ou mot de passe invalide"
+    },
+    "register": {
+      "title": "Créer un compte",
+      "username": "Nom d'utilisateur",
+      "email": "Email",
+      "password": "Mot de passe",
+      "confirmPassword": "Confirmer le mot de passe",
+      "submit": "Créer un compte",
+      "hasAccount": "Déjà un compte ?",
+      "login": "Se connecter",
+      "errors": {
+        "username": "Le nom d'utilisateur doit contenir entre 3 et 20 caractères",
+        "email": "Veuillez entrer un email valide",
+        "password": "Le mot de passe doit contenir au moins 8 caractères",
+        "passwordMatch": "Les mots de passe ne correspondent pas"
+      }
+    },
+    "recovery": {
+      "title": "Récupération du mot de passe",
+      "email": "Email",
+      "submit": "Envoyer le lien de récupération",
+      "backToLogin": "Retour à la connexion",
+      "success": "Si un compte existe avec cet email, vous recevrez les instructions de récupération",
+      "error": "Impossible de traiter la demande de récupération"
+    }
+  },
+  "torrents": {
+    "list": {
+      "title": "Parcourir les Torrents",
+      "filters": {
+        "title": "Filtres",
+        "category": "Catégorie",
+        "status": "Statut",
+        "sort": "Trier par",
+        "order": {
+          "newest": "Plus récents",
+          "oldest": "Plus anciens",
+          "mostDownloaded": "Plus téléchargés",
+          "mostSeeded": "Plus partagés",
+          "largest": "Plus volumineux",
+          "smallest": "Moins volumineux"
+        }
+      },
+      "noResults": "Aucun torrent trouvé",
+      "loading": "Chargement des torrents..."
+    },
+    "detail": {
+      "information": "Information",
+      "files": "Fichiers",
+      "comments": "Commentaires",
+      "peers": "Pairs",
+      "download": "Télécharger",
+      "stats": {
+        "size": "Taille",
+        "added": "Ajouté",
+        "seeders": "Seeders",
+        "leechers": "Leechers",
+        "completed": "Complétés",
+        "ratio": "Ratio"
+      }
+    },
+    "upload": {
+      "title": "Uploader un Torrent",
+      "form": {
+        "torrentFile": "Fichier Torrent",
+        "nfoFile": "Fichier NFO (Optionnel)",
+        "name": "Nom",
+        "description": "Description",
+        "category": "Catégorie",
+        "tags": "Tags",
+        "visibility": "Visibilité",
+        "submit": "Uploader"
+      },
+      "dropzone": {
+        "text": "Déposez le fichier torrent ici ou cliquez pour sélectionner",
+        "nfoText": "Déposez le fichier NFO ici ou cliquez pour sélectionner",
+        "accepted": "Fichiers .torrent uniquement",
+        "nfoAccepted": "Fichiers .nfo uniquement"
+      },
+      "success": "Torrent uploadé avec succès",
+      "error": "Erreur lors de l'upload du torrent"
+    }
+  },
+  "admin": {
+    "dashboard": {
+      "title": "Tableau de Bord Admin",
+      "stats": {
+        "totalUsers": "Total Utilisateurs",
+        "activeUsers": "Utilisateurs Actifs",
+        "totalTorrents": "Total Torrents",
+        "activeTorrents": "Torrents Actifs",
+        "totalDownloads": "Total Téléchargements",
+        "systemLoad": "Charge Système"
+      }
+    },
+    "users": {
+      "title": "Gestion des Utilisateurs",
+      "table": {
+        "username": "Nom d'utilisateur",
+        "email": "Email",
+        "status": "Statut",
+        "joined": "Inscrit le",
+        "ratio": "Ratio",
+        "actions": "Actions"
+      },
+      "actions": {
+        "ban": "Bannir",
+        "unban": "Débannir",
+        "delete": "Supprimer",
+        "edit": "Modifier"
+      },
+      "status": {
+        "active": "Actif",
+        "banned": "Banni",
+        "pending": "En attente"
+      }
+    },
+    "torrents": {
+      "title": "Gestion des Torrents",
+      "table": {
+        "name": "Nom",
+        "uploader": "Uploadeur",
+        "size": "Taille",
+        "added": "Ajouté",
+        "status": "Statut",
+        "actions": "Actions"
+      },
+      "actions": {
+        "approve": "Approuver",
+        "reject": "Rejeter",
+        "delete": "Supprimer",
+        "feature": "Mettre en avant"
+      },
+      "status": {
+        "active": "Actif",
+        "pending": "En attente",
+        "rejected": "Rejeté",
+        "featured": "Mis en avant"
+      }
+    },
+    "settings": {
+      "title": "Paramètres Système",
+      "sections": {
+        "general": {
+          "title": "Paramètres Généraux",
+          "siteName": "Nom du Site",
+          "siteDescription": "Description du Site",
+          "maintenance": "Mode Maintenance"
+        },
+        "registration": {
+          "title": "Paramètres d'Inscription",
+          "allowRegistration": "Autoriser l'Inscription",
+          "requireInvitation": "Invitation Requise",
+          "emailVerification": "Vérification Email"
+        },
+        "tracker": {
+          "title": "Paramètres du Tracker",
+          "announceInterval": "Intervalle d'Annonce",
+          "minAnnounceInterval": "Intervalle Min d'Annonce",
+          "maxPeers": "Max Peers par Torrent"
+        }
+      },
+      "actions": {
+        "save": "Sauvegarder",
+        "reset": "Réinitialiser"
+      }
+    },
+    "nav": {
+      "dashboard": "Tableau de Bord",
+      "users": "Utilisateurs",
+      "torrents": "Torrents",
+      "settings": "Paramètres"
+    }
+  }
+} 
