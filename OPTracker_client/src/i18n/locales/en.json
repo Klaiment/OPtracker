@@ -197,7 +197,11 @@
           "title": "General Settings",
           "siteName": "Site Name",
           "siteDescription": "Site Description",
-          "maintenance": "Maintenance Mode"
+          "maintenance": "Maintenance Mode",
+          "logo": "Site Logo",
+          "uploadLogo": "Upload Logo",
+          "removeLogo": "Remove Logo",
+          "logoHelp": "Recommended size: 320x100px. Supports PNG, JPG, SVG."
         },
         "registration": {
           "title": "Registration Settings",

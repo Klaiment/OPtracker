@@ -197,7 +197,11 @@
           "title": "Configuración General",
           "siteName": "Nombre del Sitio",
           "siteDescription": "Descripción del Sitio",
-          "maintenance": "Modo Mantenimiento"
+          "maintenance": "Modo Mantenimiento",
+          "logo": "Logo del Sitio",
+          "uploadLogo": "Subir Logo",
+          "removeLogo": "Eliminar Logo",
+          "logoHelp": "Tamaño recomendado: 320x100px. Soporta PNG, JPG, SVG."
         },
         "registration": {
           "title": "Configuración de Registro",

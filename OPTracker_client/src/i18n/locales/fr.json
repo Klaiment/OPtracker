@@ -184,7 +184,11 @@
           "title": "Paramètres Généraux",
           "siteName": "Nom du Site",
           "siteDescription": "Description du Site",
-          "maintenance": "Mode Maintenance"
+          "maintenance": "Mode Maintenance",
+          "logo": "Logo du Site",
+          "uploadLogo": "Télécharger Logo",
+          "removeLogo": "Supprimer Logo",
+          "logoHelp": "Taille recommandée : 320x100px. Supporte PNG, JPG, SVG."
         },
         "registration": {
           "title": "Paramètres d'Inscription",
