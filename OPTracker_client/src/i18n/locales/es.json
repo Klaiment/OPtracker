@@ -1,7 +1,7 @@
 {
   "home": {
     "title": "OPTracker",
-    "subtitle": "El Rastreador de Torrents OverPowered",
+    "subtitle": "El Torrent Tracker OverPowered",
     "search": {
       "placeholder": "Buscar torrents...",
       "button": "Buscar",
@@ -15,16 +15,18 @@
       }
     },
     "nav": {
-      "browse": "Explorar Torrents",
+      "browse": "Buscar Torrents",
       "recent": "Torrents Recientes",
       "top": "Top 100",
       "stats": "Estadísticas"
     },
     "footer": {
-      "description": "OPTracker - Rastreador de Torrents de Código Abierto",
+      "description": "OPTracker - Torrent Tracker de Código Abierto",
       "about": "Acerca de",
       "stats": "Estadísticas",
-      "api": "API"
+      "api": "API",
+      "login": "Iniciar Sesión",
+      "register": "Regístrate"
     }
   },
   "errors": {

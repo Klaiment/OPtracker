@@ -24,7 +24,9 @@
         "description": "OPTracker - Open Source Torrent Tracker",
         "about": "About",
         "stats": "Statistics",
-        "api": "API"
+        "api": "API",
+        "login": "Login",
+        "register": "Register"
       }
     },
     "errors": {
