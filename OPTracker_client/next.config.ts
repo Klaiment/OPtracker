@@ -1,8 +1,9 @@
 import type { NextConfig } from "next";
-import {config} from "./config";
 
-const nextConfig: NextConfig = {
-  /* config options here */
+const config: NextConfig = {
+  env: {
+    API_URL: process.env.NEXT_PUBLIC_API_URL
+  }
 };
 
-export {nextConfig, config};
+export default config;
