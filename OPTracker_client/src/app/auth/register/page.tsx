@@ -11,11 +11,10 @@ import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
 import AuthCard from '@/components/auth/AuthCard';
 import AuthInput from '@/components/auth/AuthInput';
+import { config } from "@system/next.config";
 import axios from "axios";
 import {showNotification} from "@/utils/notifications";
 
-// Opción 1: Usando process.env directamente
-const API_URL = process.env.NEXT_PUBLIC_API_URL;
 export default function RegisterPage() {
   const { t } = useTranslation();
   const [formData, setFormData] = useState({
@@ -52,16 +51,16 @@ export default function RegisterPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (validateForm()) {
-      try {
-        await axios.post(`${API_URL}/api/auth/local/register`, {
-          username: formData.username,
-          email: formData.email,
-          password: formData.password
-        });
+      // Here goes the registration logic
+      await axios.post(`${config.WEBSITE_URL}/api/auth/local/register`, {
+        username: formData.username,
+        email: formData.email,
+        password: formData.password
+      }).then((res) => {
         showNotification.success(t('auth.notification.successRegister'));
-      } catch {
+      }).catch((err) => {
         showNotification.error(t('auth.notification.error'));
-      }
+      });
     }
   };
 
