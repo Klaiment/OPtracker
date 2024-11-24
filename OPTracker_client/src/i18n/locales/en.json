@@ -65,8 +65,14 @@
         "errors": {
           "username": "Username must be between 3 and 20 characters",
           "email": "Please enter a valid email",
-          "password": "Password must be at least 8 characters",
-          "passwordMatch": "Passwords do not match"
+          "passwordMatch": "Passwords do not match",
+          "passwordRequirements": "Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number"
+        },
+        "passwordStrength": {
+          "weak": "Weak",
+          "fair": "Fair",
+          "good": "Good",
+          "strong": "Strong"
         }
       },
       "recovery": {
