@@ -65,14 +65,8 @@
         "errors": {
           "username": "Username must be between 3 and 20 characters",
           "email": "Please enter a valid email",
-          "passwordMatch": "Passwords do not match",
-          "passwordRequirements": "Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number"
-        },
-        "passwordStrength": {
-          "weak": "Weak",
-          "fair": "Fair",
-          "good": "Good",
-          "strong": "Strong"
+          "password": "Password must be at least 8 characters",
+          "passwordMatch": "Passwords do not match"
         }
       },
       "recovery": {
@@ -84,10 +78,375 @@
         "error": "Unable to process recovery request"
       },
       "notification": {
-        "successRegister": "Account created successfully",
+        "successRegister": "Account created successfully. You can now log in.",
         "successRecovery": "If an account exists with this email, you will receive recovery instructions",
         "successPassword": "Password changed successfully",
-        "error": "An error has occurred. Please try again later"
+        "error": "An error has occurred. Please try again later.",
+        "disconnected": "You have been logged out. Please log back in to continue."
+      }
+    },
+    "torrents": {
+      "list": {
+        "title": "Browse Torrents",
+        "filters": {
+          "title": "Filters",
+          "category": "Category",
+          "status": "Status",
+          "sort": "Sort by",
+          "order": {
+            "newest": "Newest",
+            "oldest": "Oldest",
+            "mostDownloaded": "Most Downloaded",
+            "mostSeeded": "Most Seeded",
+            "largest": "Largest Size",
+            "smallest": "Smallest Size"
+          }
+        },
+        "noResults": "No torrents found",
+        "loading": "Loading torrents..."
+      },
+      "detail": {
+        "information": "Information",
+        "files": "Files",
+        "comments": "Comments",
+        "peers": "Peers",
+        "download": "Download",
+        "stats": {
+          "size": "Size",
+          "added": "Added",
+          "seeders": "Seeders",
+          "leechers": "Leechers",
+          "completed": "Completed",
+          "ratio": "Ratio"
+        }
+      },
+      "upload": {
+        "title": "Upload Torrent",
+        "form": {
+          "torrentFile": "Torrent File",
+          "nfoFile": "NFO File (Optional)",
+          "name": "Name",
+          "description": "Description",
+          "category": "Category",
+          "tags": "Tags",
+          "visibility": "Visibility",
+          "submit": "Upload"
+        },
+        "dropzone": {
+          "text": "Drop torrent file here or click to select",
+          "nfoText": "Drop NFO file here or click to select",
+          "accepted": ".torrent files only",
+          "nfoAccepted": ".nfo files only"
+        },
+        "success": "Torrent uploaded successfully",
+        "error": "Error uploading torrent"
+      }
+    },
+    "admin": {
+      "dashboard": {
+        "title": "Admin Dashboard",
+        "stats": {
+          "totalUsers": "Total Users",
+          "activeUsers": "Active Users",
+          "totalTorrents": "Total Torrents",
+          "activeTorrents": "Active Torrents",
+          "totalDownloads": "Total Downloads",
+          "systemLoad": "System Load"
+        }
+      },
+      "users": {
+        "title": "User Management",
+        "table": {
+          "username": "Username",
+          "email": "Email",
+          "status": "Status",
+          "joined": "Joined",
+          "ratio": "Ratio",
+          "actions": "Actions"
+        },
+        "actions": {
+          "ban": "Ban",
+          "unban": "Unban",
+          "delete": "Delete",
+          "edit": "Edit"
+        },
+        "status": {
+          "active": "Active",
+          "banned": "Banned",
+          "pending": "Pending"
+        }
+      },
+      "torrents": {
+        "title": "Torrent Management",
+        "table": {
+          "name": "Name",
+          "uploader": "Uploaded by",
+          "size": "Size",
+          "added": "Added",
+          "status": "Status",
+          "actions": "Actions"
+        },
+        "actions": {
+          "approve": "Approve",
+          "reject": "Reject",
+          "delete": "Delete",
+          "feature": "Feature"
+        },
+        "status": {
+          "active": "Active",
+          "pending": "Pending",
+          "rejected": "Rejected",
+          "featured": "Featured"
+        }
+      },
+      "settings": {
+        "title": "System Settings",
+        "sections": {
+          "general": {
+            "title": "General Settings",
+            "siteName": "Site Name",
+            "siteDescription": "Site Description",
+            "maintenance": "Maintenance Mode",
+            "logo": "Site Logo",
+            "uploadLogo": "Upload Logo",
+            "removeLogo": "Remove Logo",
+            "logoHelp": "Recommended size: 320x100px. Supports PNG, JPG, SVG."
+          },
+          "registration": {
+            "title": "Registration Settings",
+            "allowRegistration": "Allow Registration",
+            "requireInvitation": "Require Invitation",
+            "emailVerification": "Email Verification"
+          },
+          "tracker": {
+            "title": "Tracker Settings",
+            "announceInterval": "Announce Interval",
+            "minAnnounceInterval": "Min Announce Interval",
+            "maxPeers": "Max Peers per Torrent"
+          }
+        },
+        "actions": {
+          "save": "Save Changes",
+          "reset": "Reset to Default"
+        }
+      },
+      "nav": {
+        "dashboard": "Dashboard",
+        "users": "Users",
+        "torrents": "Torrents",
+        "settings": "Settings"
+      }
+    },
+    "theme": {
+      "toggle": "Toggle theme",
+      "dark": "Dark mode",
+      "light": "Light mode"
+    },
+    "profile": {
+      "title": "Profile",
+      "sections": {
+        "info": "General Information",
+        "stats": "Statistics",
+        "preferences": "Preferences"
+      },
+      "fields": {
+        "username": "Username",
+        "email": "Email",
+        "joinDate": "Member Since",
+        "avatar": "Profile Picture",
+        "uploaded": "Total Uploaded",
+        "downloaded": "Total Downloaded",
+        "ratio": "Ratio",
+        "points": "Points",
+        "rank": "User Rank"
+      },
+      "preferences": {
+        "notifications": "Enable Notifications",
+        "privateProfile": "Private Profile",
+        "language": "Language",
+        "theme": {
+          "title": "Theme",
+          "light": "Light Mode",
+          "dark": "Dark Mode",
+          "system": "System Default",
+          "toggle": "Toggle Theme"
+        }
+      },
+      "actions": {
+        "uploadAvatar": "Upload Picture",
+        "removeAvatar": "Remove Picture",
+        "saveChanges": "Save Changes",
+        "changePassword": "Change Password"
+      },
+      "stats": {
+        "title": "Statistics",
+        "charts": {
+          "activityTitle": "Transfer Activity",
+          "categoryTitle": "Category Distribution",
+          "ratioTitle": "Ratio Evolution",
+          "upload": "Upload",
+          "download": "Download",
+          "ratio": "Ratio",
+          "timeRanges": {
+            "day": "24 Hours",
+            "week": "Week",
+            "month": "Month",
+            "year": "Year"
+          },
+          "categories": {
+            "movies": "Movies",
+            "tvShows": "TV Shows",
+            "music": "Music",
+            "software": "Software",
+            "games": "Games",
+            "other": "Other"
+          },
+          "tooltips": {
+            "transfered": "Transferred",
+            "ratio": "Ratio",
+            "percentage": "Percentage"
+          }
+        },
+        "achievements": {
+          "title": "Achievements",
+          "uploader": "Top Uploader",
+          "seeder": "Dedicated Seeder",
+          "contributor": "Valuable Contributor"
+        }
+      },
+      "history": {
+        "title": "Download History",
+        "filters": {
+          "status": "Status",
+          "search": "Search",
+          "searchPlaceholder": "Search by name...",
+          "all": "All Status"
+        },
+        "table": {
+          "name": "Torrent Name",
+          "date": "Download Date",
+          "size": "Size",
+          "uploaded": "Uploaded",
+          "downloaded": "Downloaded",
+          "ratio": "Ratio",
+          "status": "Status"
+        },
+        "status": {
+          "completed": "Completed",
+          "active": "Active",
+          "stopped": "Stopped"
+        },
+        "stats": {
+          "totalDownloads": "Total Downloads",
+          "activeDownloads": "Active Downloads",
+          "totalData": "Total Data",
+          "avgRatio": "Average Ratio"
+        },
+        "empty": "No downloads found",
+        "loading": "Loading download history..."
+      },
+      "nav": {
+        "overview": "Overview",
+        "history": "History",
+        "stats": "Statistics",
+        "settings": "Settings"
+      },
+      "settings": {
+        "title": "Profile Settings",
+        "sections": {
+          "security": "Security",
+          "notifications": "Notifications",
+          "privacy": "Privacy",
+          "preferences": "Preferences",
+          "downloads": "Downloads"
+        },
+        "fields": {
+          "email": "Email Address",
+          "currentPassword": "Current Password",
+          "newPassword": "New Password",
+          "confirmPassword": "Confirm Password",
+          "downloadPath": "Default Download Path",
+          "language": "Language",
+          "theme": "Theme"
+        },
+        "notifications": {
+          "emailNotifications": "Email Notifications",
+          "browserNotifications": "Browser Notifications",
+          "newsletterSubscription": "Newsletter Subscription",
+          "downloadComplete": "Download Complete Notifications",
+          "newMessage": "New Message Notifications"
+        },
+        "privacy": {
+          "showProfile": "Show Profile to Others",
+          "showStats": "Show Statistics",
+          "showHistory": "Show Download History",
+          "showOnlineStatus": "Show Online Status"
+        },
+        "preferences": {
+          "theme": {
+            "title": "Theme",
+            "light": "Light Mode",
+            "dark": "Dark Mode",
+            "system": "System Default",
+            "toggle": "Toggle Theme"
+          },
+          "autoStart": "Auto-start Downloads",
+          "defaultCategory": "Default Category",
+          "maxActiveDownloads": "Maximum Active Downloads",
+          "maxActiveUploads": "Maximum Active Uploads"
+        },
+        "actions": {
+          "save": "Save Changes",
+          "changePassword": "Change Password",
+          "cancel": "Cancel",
+          "reset": "Reset to Default"
+        },
+        "messages": {
+          "saved": "Settings saved successfully",
+          "error": "Error saving settings",
+          "passwordChanged": "Password changed successfully",
+          "confirmReset": "Are you sure you want to reset all settings?"
+        },
+        "errors": {
+          "invalidEmail": "Invalid email address",
+          "passwordMismatch": "Passwords do not match",
+          "currentPasswordRequired": "Current password is required",
+          "invalidPath": "Invalid download path"
+        }
+      },
+      "activity": {
+        "title": "Recent Activity",
+        "types": {
+          "download": {
+            "title": "Started downloading",
+            "completed": "Completed download"
+          },
+          "achievement": {
+            "title": "Achievement unlocked"
+          },
+          "ratio": {
+            "title": "Ratio updated",
+            "increased": "Ratio increased to {{newRatio}}",
+            "decreased": "Ratio decreased to {{newRatio}}"
+          },
+          "seeding": {
+            "title": "Seeding {{seedingCount}} torrents",
+            "started": "Started seeding",
+            "stopped": "Stopped seeding"
+          }
+        }
+      }
+    },
+    "welcome": {
+      "title": "Welcome to OPTracker!",
+      "description": "Your destination for torrent tracking. Explore our collection and find what you're looking for.",
+      "buttons": {
+        "success": "Test Success",
+        "error": "Test Error"
+      },
+      "notifications": {
+        "success": "Welcome to OPTracker!",
+        "error": "Oops! Something went wrong"
       }
     }
 } 

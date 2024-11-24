@@ -13,11 +13,9 @@ import AuthCard from '@/components/auth/AuthCard';
 import AuthInput from '@/components/auth/AuthInput';
 import axios from "axios";
 import {showNotification} from "@/utils/notifications";
-import PasswordStrengthBar from '@/components/auth/PasswordStrengthBar';
 
 // Opción 1: Usando process.env directamente
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
-
 export default function RegisterPage() {
   const { t } = useTranslation();
   const [formData, setFormData] = useState({
@@ -27,7 +25,6 @@ export default function RegisterPage() {
     confirmPassword: ''
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
-  const [attempted, setAttempted] = useState(false);
 
   const validateForm = () => {
     const newErrors: Record<string, string> = {};
@@ -40,9 +37,8 @@ export default function RegisterPage() {
       newErrors.email = t('auth.register.errors.email');
     }
 
-    const passwordRegex = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,}$/;
-    if (!passwordRegex.test(formData.password)) {
-      newErrors.password = t('auth.register.errors.passwordRequirements');
+    if (formData.password.length < 8) {
+      newErrors.password = t('auth.register.errors.password');
     }
 
     if (formData.password !== formData.confirmPassword) {
@@ -53,26 +49,8 @@ export default function RegisterPage() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newPassword = e.target.value;
-    setFormData(prev => ({ ...prev, password: newPassword }));
-    
-    if (attempted) {
-      const passwordRegex = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,}$/;
-      const newErrors = { ...errors };
-      if (!passwordRegex.test(newPassword)) {
-        newErrors.password = t('auth.register.errors.passwordRequirements');
-      } else {
-        delete newErrors.password;
-      }
-      setErrors(newErrors);
-    }
-  };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setAttempted(true);
-    
     if (validateForm()) {
       try {
         await axios.post(`${API_URL}/api/auth/local/register`, {
@@ -95,7 +73,7 @@ export default function RegisterPage() {
           type="text"
           value={formData.username}
           onChange={(e) => setFormData(prev => ({ ...prev, username: e.target.value }))}
-          error={attempted ? errors.username : undefined}
+          error={errors.username}
           required
         />
         <AuthInput
@@ -103,30 +81,25 @@ export default function RegisterPage() {
           type="email"
           value={formData.email}
           onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-          error={attempted ? errors.email : undefined}
+          error={errors.email}
           required
         />
-        <div className="space-y-1">
-          <AuthInput
-            label={t('auth.register.password')}
-            type="password"
-            value={formData.password}
-            onChange={handlePasswordChange}
-            error={attempted ? errors.password : undefined}
-            required
-          />
-          <PasswordStrengthBar password={formData.password} />
-        </div>
-        <div className="mt-3">
-          <AuthInput
-            label={t('auth.register.confirmPassword')}
-            type="password"
-            value={formData.confirmPassword}
-            onChange={(e) => setFormData(prev => ({ ...prev, confirmPassword: e.target.value }))}
-            error={attempted ? errors.confirmPassword : undefined}
-            required
-          />
-        </div>
+        <AuthInput
+          label={t('auth.register.password')}
+          type="password"
+          value={formData.password}
+          onChange={(e) => setFormData(prev => ({ ...prev, password: e.target.value }))}
+          error={errors.password}
+          required
+        />
+        <AuthInput
+          label={t('auth.register.confirmPassword')}
+          type="password"
+          value={formData.confirmPassword}
+          onChange={(e) => setFormData(prev => ({ ...prev, confirmPassword: e.target.value }))}
+          error={errors.confirmPassword}
+          required
+        />
         
         <button
           type="submit"
