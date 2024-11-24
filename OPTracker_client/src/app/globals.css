@@ -19,6 +19,9 @@
     --error: #dc2626;
     --scrollbar-thumb: rgba(203, 213, 225, 0.8);
     --scrollbar-track: rgba(241, 245, 249, 0.1);
+    --password-weak: #EF4444;     /* Rojo */
+    --password-fair: #EAB308;     /* Amarillo */
+    --password-good: #22C55E;     /* Verde */
   }
 
   :root[class~="dark"] {
@@ -37,6 +40,9 @@
     --error: #f44747;
     --scrollbar-thumb: rgba(75, 85, 99, 0.8);
     --scrollbar-track: rgba(45, 45, 45, 0.1);
+    --password-weak: #DC2626;     /* Rojo más oscuro */
+    --password-fair: #FACC15;     /* Amarillo más brillante */
+    --password-good: #16A34A;     /* Verde más oscuro */
   }
 
   html {
