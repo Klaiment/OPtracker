@@ -65,8 +65,14 @@
       "errors": {
         "username": "El usuario debe tener entre 3 y 20 caracteres",
         "email": "Por favor ingresa un correo válido",
-        "password": "La contraseña debe tener al menos 8 caracteres",
-        "passwordMatch": "Las contraseñas no coinciden"
+        "passwordMatch": "Las contraseñas no coinciden",
+        "passwordRequirements": "La contraseña debe tener al menos 8 caracteres y contener al menos una letra mayúscula, una minúscula y un número"
+      },
+      "passwordStrength": {
+        "weak": "Débil",
+        "fair": "Regular",
+        "good": "Buena",
+        "strong": "Fuerte"
       }
     },
     "recovery": {
