@@ -8,6 +8,7 @@
 
 import { useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import DashboardLayout from '@/components/dashboard/DashboardLayout';
 
 interface FileDropzoneProps {
   file: File | null;
@@ -84,6 +85,7 @@ export default function TorrentUploadPage() {
   };
 
   return (
+    <DashboardLayout>
     <div className="min-h-screen bg-background text-text p-6">
       <div className="max-w-3xl mx-auto">
         <h1 className="text-3xl font-bold text-primary mb-6">
@@ -128,7 +130,7 @@ export default function TorrentUploadPage() {
                 type="text"
                 value={formData.name}
                 onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
-                className="w-full p-2 bg-background border border-border rounded"
+                className="w-full p-2 bg-background border border-border rounded hover:border-primary transition-colors"
                 required
               />
             </div>
@@ -140,7 +142,7 @@ export default function TorrentUploadPage() {
               <textarea
                 value={formData.description}
                 onChange={(e) => setFormData(prev => ({ ...prev, description: e.target.value }))}
-                className="w-full p-2 bg-background border border-border rounded h-32"
+                className="w-full p-2 bg-background border border-border rounded h-32 hover:border-primary transition-colors"
                 required
               />
             </div>
@@ -152,7 +154,7 @@ export default function TorrentUploadPage() {
               <select
                 value={formData.category}
                 onChange={(e) => setFormData(prev => ({ ...prev, category: e.target.value }))}
-                className="w-full p-2 bg-background border border-border rounded"
+                className="w-full p-2 bg-background border border-border rounded hover:border-primary transition-colors"
                 required
               >
                 <option value="">Select category</option>
@@ -174,6 +176,7 @@ export default function TorrentUploadPage() {
           </div>
         </form>
       </div>
-    </div>
+      </div>
+    </DashboardLayout>
   );
 } 
