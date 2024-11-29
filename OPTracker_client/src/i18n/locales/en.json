@@ -93,7 +93,7 @@
     },
     "torrents": {
       "list": {
-        "title": "Browse Torrents",
+        "title": "Search Torrents",
         "filters": {
           "title": "Filters",
           "category": "Category",
@@ -453,6 +453,33 @@
       "notifications": {
         "success": "Welcome to OPTracker!",
         "error": "Oops! Something went wrong"
+      }
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "nav": {
+        "home": "Home",
+        "search": "Search",
+        "upload": "Upload",
+        "profile": "Profile",
+        "announcements": "Announcements",
+        "requests": "Requests",
+        "rss": "RSS",
+        "reports": "Reports",
+        "stats": "Stats",
+        "admin": "Admin"
+      },
+      "latestTorrents": {
+        "title": "Latest Torrents",
+        "table": {
+          "title": "Title",
+          "category": "Category",
+          "size": "Size",
+          "seeders": "Seeders",
+          "leechers": "Leechers",
+          "uploaded": "Uploaded",
+          "uploader": "Uploader"
+        }
       }
     }
 } 

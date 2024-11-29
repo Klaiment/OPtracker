@@ -11,6 +11,7 @@ import { useTranslation } from 'react-i18next';
 import ProfileLayout from '@/components/profile/ProfileLayout';
 import { useTheme } from '@/contexts/ThemeContext';
 import PasswordChangeModal from '@/components/profile/PasswordChangeModal';
+import DashboardLayout from '@/components/dashboard/DashboardLayout';
 
 interface ProfileSettings {
   email: string;
@@ -67,8 +68,9 @@ export default function ProfileSettingsPage() {
   };
 
   return (
-    <ProfileLayout title="profile.settings.title">
-      <div className="space-y-6">
+    <DashboardLayout>
+      <ProfileLayout title="profile.settings.title">
+        <div className="space-y-6">
         <form onSubmit={handleSubmit} className="mt-6 space-y-6">
           {/* Security Section */}
           <section className="bg-surface rounded-lg border border-border p-6">
@@ -84,7 +86,7 @@ export default function ProfileSettingsPage() {
                   type="email"
                   value={settings.email}
                   onChange={(e) => setSettings({ ...settings, email: e.target.value })}
-                  className="w-full p-2 bg-background border border-border rounded"
+                  className="w-full p-2 bg-background border border-border rounded hover:border-primary transition-colors"
                 />
               </div>
               <button
@@ -189,6 +191,7 @@ export default function ProfileSettingsPage() {
           />
         )}
       </div>
-    </ProfileLayout>
+      </ProfileLayout>
+    </DashboardLayout>
   );
 } 

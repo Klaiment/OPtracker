@@ -13,14 +13,15 @@ import CategoryDistribution from '@/components/profile/charts/CategoryDistributi
 import RatioTrend from '@/components/profile/charts/RatioTrend';
 import AchievementCard from '@/components/profile/AchievementCard';
 import { mockAchievements } from '@/types/user';
-
+import DashboardLayout from '@/components/dashboard/DashboardLayout';
 export default function StatsPage() {
   const { t } = useTranslation();
 
   return (
-    <ProfileLayout title="profile.stats.title">
-      <div className="space-y-6">
-        {/* Charts */}
+    <DashboardLayout>
+      <ProfileLayout title="profile.stats.title">
+        <div className="space-y-6">
+          {/* Charts */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="bg-surface rounded-lg border border-border p-6">
             <h2 className="text-xl font-semibold mb-4">
@@ -55,10 +56,11 @@ export default function StatsPage() {
                   achievement={achievement}
                 />
               ))}
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </ProfileLayout>
+      </ProfileLayout>
+    </DashboardLayout>
   );
 } 

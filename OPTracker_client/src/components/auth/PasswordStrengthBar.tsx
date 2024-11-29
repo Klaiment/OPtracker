@@ -16,7 +16,7 @@ const PasswordStrengthBar: React.FC<PasswordStrengthBarProps> = ({ password }) =
   const calculateStrength = (): { strength: number; message: string } => {
     let strength = 0;
 
-    // Validaciones individuales (20% cada una)
+    // Individual validations (20% each)
     if (password.length >= 8) strength += 20;
     if (/[A-Z]/.test(password)) strength += 20;
     if (/[a-z]/.test(password)) strength += 20;
@@ -34,10 +34,10 @@ const PasswordStrengthBar: React.FC<PasswordStrengthBarProps> = ({ password }) =
   const { strength, message } = calculateStrength();
 
   const getBarColor = () => {
-    if (strength <= 20) return 'bg-[var(--password-weak)]';     // Débil
-    if (strength <= 60) return 'bg-[var(--password-fair)]';     // Regular
-    if (strength <= 80) return 'bg-[var(--password-good)]';     // Buena
-    return 'bg-primary';                                        // Fuerte - usa el color primario existente
+    if (strength <= 20) return 'bg-[var(--password-weak)]';     // Weak
+    if (strength <= 60) return 'bg-[var(--password-fair)]';     // Fair
+    if (strength <= 80) return 'bg-[var(--password-good)]';     // Good
+    return 'bg-primary';                                        // Strong - uses the existing primary color
   };
 
   return (

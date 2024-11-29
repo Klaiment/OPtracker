@@ -11,6 +11,7 @@ import { useTranslation } from 'react-i18next';
 import ProfileLayout from '@/components/profile/ProfileLayout';
 import DownloadHistoryTable from '@/components/profile/DownloadHistoryTable';
 import { DownloadHistory } from '@/types/user';
+import DashboardLayout from '@/components/dashboard/DashboardLayout';
 
 // Example data
 const mockDownloads: DownloadHistory[] = [
@@ -49,6 +50,7 @@ export default function DownloadHistoryPage() {
   });
 
   return (
+    <DashboardLayout>
     <ProfileLayout title="profile.history.title">
       <div className="space-y-6">
         {/* Filters */}
@@ -61,7 +63,7 @@ export default function DownloadHistoryPage() {
               <select
                 value={statusFilter}
                 onChange={(e) => setStatusFilter(e.target.value)}
-                className="w-full p-2 bg-background border border-border rounded hover:border-primary transition-colors"
+                className="w-full h-10 px-3 bg-background border border-border rounded hover:border-primary transition-colors focus:outline-none focus:ring-1 focus:ring-primary"
               >
                 <option value="all">{t('profile.history.filters.all')}</option>
                 <option value="completed">{t('profile.history.status.completed')}</option>
@@ -78,7 +80,7 @@ export default function DownloadHistoryPage() {
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 placeholder={t('profile.history.filters.searchPlaceholder')}
-                className="w-full p-2 bg-background border border-border rounded hover:border-primary transition-colors"
+                className="w-full h-10 px-3 bg-background border border-border rounded hover:border-primary transition-colors focus:outline-none focus:ring-1 focus:ring-primary"
               />
             </div>
           </div>
@@ -124,7 +126,8 @@ export default function DownloadHistoryPage() {
         <div className="bg-surface rounded-lg border border-border overflow-hidden">
           <DownloadHistoryTable downloads={filteredDownloads} />
         </div>
-      </div>
-    </ProfileLayout>
+        </div>
+      </ProfileLayout>
+    </DashboardLayout>
   );
 } 
