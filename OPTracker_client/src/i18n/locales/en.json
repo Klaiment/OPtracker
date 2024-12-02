@@ -24,7 +24,9 @@
         "description": "OPTracker - Open Source Torrent Tracker",
         "about": "About",
         "stats": "Statistics",
-        "api": "API"
+        "api": "API",
+        "login": "Login",
+        "register": "Register"
       }
     },
     "errors": {
@@ -63,8 +65,14 @@
         "errors": {
           "username": "Username must be between 3 and 20 characters",
           "email": "Please enter a valid email",
-          "password": "Password must be at least 8 characters",
-          "passwordMatch": "Passwords do not match"
+          "passwordMatch": "Passwords do not match",
+          "passwordRequirements": "Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number"
+        },
+        "passwordStrength": {
+          "weak": "Weak",
+          "fair": "Fair",
+          "good": "Good",
+          "strong": "Strong"
         }
       },
       "recovery": {
@@ -85,7 +93,7 @@
     },
     "torrents": {
       "list": {
-        "title": "Browse Torrents",
+        "title": "Search Torrents",
         "filters": {
           "title": "Filters",
           "category": "Category",
@@ -445,6 +453,33 @@
       "notifications": {
         "success": "Welcome to OPTracker!",
         "error": "Oops! Something went wrong"
+      }
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "nav": {
+        "home": "Home",
+        "search": "Search",
+        "upload": "Upload",
+        "profile": "Profile",
+        "announcements": "Announcements",
+        "requests": "Requests",
+        "rss": "RSS",
+        "reports": "Reports",
+        "stats": "Stats",
+        "admin": "Admin"
+      },
+      "latestTorrents": {
+        "title": "Latest Torrents",
+        "table": {
+          "title": "Title",
+          "category": "Category",
+          "size": "Size",
+          "seeders": "Seeders",
+          "leechers": "Leechers",
+          "uploaded": "Uploaded",
+          "uploader": "Uploader"
+        }
       }
     }
 } 

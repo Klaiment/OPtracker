@@ -1,7 +1,7 @@
 {
   "home": {
     "title": "OPTracker",
-    "subtitle": "El Rastreador de Torrents OverPowered",
+    "subtitle": "El Torrent Tracker OverPowered",
     "search": {
       "placeholder": "Buscar torrents...",
       "button": "Buscar",
@@ -15,16 +15,18 @@
       }
     },
     "nav": {
-      "browse": "Explorar Torrents",
+      "browse": "Buscar Torrents",
       "recent": "Torrents Recientes",
       "top": "Top 100",
       "stats": "Estadísticas"
     },
     "footer": {
-      "description": "OPTracker - Rastreador de Torrents de Código Abierto",
+      "description": "OPTracker - Torrent Tracker de Código Abierto",
       "about": "Acerca de",
       "stats": "Estadísticas",
-      "api": "API"
+      "api": "API",
+      "login": "Iniciar Sesión",
+      "register": "Regístrate"
     }
   },
   "errors": {
@@ -63,8 +65,14 @@
       "errors": {
         "username": "El usuario debe tener entre 3 y 20 caracteres",
         "email": "Por favor ingresa un correo válido",
-        "password": "La contraseña debe tener al menos 8 caracteres",
-        "passwordMatch": "Las contraseñas no coinciden"
+        "passwordMatch": "Las contraseñas no coinciden",
+        "passwordRequirements": "La contraseña debe tener al menos 8 caracteres y contener al menos una letra mayúscula, una minúscula y un número"
+      },
+      "passwordStrength": {
+        "weak": "Débil",
+        "fair": "Regular",
+        "good": "Buena",
+        "strong": "Fuerte"
       }
     },
     "recovery": {
@@ -85,7 +93,7 @@
   },
   "torrents": {
     "list": {
-      "title": "Explorar Torrents",
+      "title": "Buscar Torrents",
       "filters": {
         "title": "Filtros",
         "category": "Categoría",
@@ -445,6 +453,33 @@
     "notifications": {
       "success": "¡Bienvenido a OPTracker!",
       "error": "¡Ups! Algo salió mal"
+    }
+  },
+  "dashboard": {
+    "title": "Panel de Control",
+    "nav": {
+      "home": "Inicio",
+      "search": "Buscar",
+      "upload": "Subir",
+      "profile": "Perfil",
+      "announcements": "Anuncios",
+      "requests": "Solicitudes",
+      "rss": "RSS",
+      "reports": "Reportes",
+      "stats": "Estadísticas",
+      "admin": "Admin"
+    },
+    "latestTorrents": {
+      "title": "Últimos Torrents",
+      "table": {
+        "title": "Título",
+        "category": "Categoría",
+        "size": "Tamaño",
+        "seeders": "Seeders",
+        "leechers": "Leechers",
+        "uploaded": "Subido",
+        "uploader": "Subido por"
+      }
     }
   }
 } 

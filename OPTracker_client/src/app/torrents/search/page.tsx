@@ -11,6 +11,7 @@ import { useTranslation } from 'react-i18next';
 import TorrentCard from '@/components/torrents/TorrentCard';
 import TorrentFilters from '@/components/torrents/TorrentFilters';
 import { Torrent, TorrentFilter } from '@/types/torrent';
+import DashboardLayout from '@/components/dashboard/DashboardLayout';
 
 // Example data - will be replaced with real data from the API
 const mockTorrents: Torrent[] = [
@@ -44,6 +45,7 @@ export default function TorrentListPage() {
   };
 
   return (
+    <DashboardLayout>
     <div className="min-h-screen bg-background text-text p-6">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-3xl font-bold text-primary mb-6">
@@ -67,6 +69,7 @@ export default function TorrentListPage() {
           </div>
         )}
       </div>
-    </div>
+      </div>
+    </DashboardLayout>
   );
 } 
