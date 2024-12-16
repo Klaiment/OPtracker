@@ -1,6 +1,12 @@
 #!/bin/bash
 
 # Demande des informations à l'utilisateur
+
+sudo apt update
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+nvm install 20
+nvm use 20
+
 read -p "Entrez l'URL de votre site [http://localhost] : " WEBSITE_URL
 WEBSITE_URL=${WEBSITE_URL:-http://localhost}
 
