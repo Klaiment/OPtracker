@@ -11,18 +11,37 @@ import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
 import AuthCard from '@/components/auth/AuthCard';
 import AuthInput from '@/components/auth/AuthInput';
+import axios from 'axios';
+import { config } from '@system/next.config';
+import { showNotification } from '@/utils/notifications';
+import { useRouter } from 'next/navigation';
 
 export default function LoginPage() {
   const { t } = useTranslation();
+  const router = useRouter();
+
   const [formData, setFormData] = useState({
     username: '',
-    password: ''
+    password: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     // Here goes the login logic
-    console.log('Login:', formData);
+    await axios
+      .post(`${config.WEBSITE_URL}/api/auth/local/`, {
+        identifier: formData.username,
+        password: formData.password,
+      })
+      .then((res) => {
+        localStorage.setItem('token', res.data.jwt);
+        if (typeof window !== 'undefined') {
+          router.push('/');
+        }
+      })
+      .catch((err) => {
+        showNotification.error(t('auth.notification.error'));
+      });
   };
 
   return (
@@ -32,17 +51,21 @@ export default function LoginPage() {
           label={t('auth.login.username')}
           type="text"
           value={formData.username}
-          onChange={(e) => setFormData(prev => ({ ...prev, username: e.target.value }))}
+          onChange={(e) =>
+            setFormData((prev) => ({ ...prev, username: e.target.value }))
+          }
           required
         />
         <AuthInput
           label={t('auth.login.password')}
           type="password"
           value={formData.password}
-          onChange={(e) => setFormData(prev => ({ ...prev, password: e.target.value }))}
+          onChange={(e) =>
+            setFormData((prev) => ({ ...prev, password: e.target.value }))
+          }
           required
         />
-        
+
         <button
           type="submit"
           className="w-full bg-primary text-background py-2 rounded 
@@ -53,7 +76,7 @@ export default function LoginPage() {
       </form>
 
       <div className="mt-6 text-center text-sm">
-        <Link 
+        <Link
           href="/auth/recovery"
           className="text-primary hover:text-primary-dark transition-colors"
         >
@@ -65,7 +88,7 @@ export default function LoginPage() {
         <span className="text-text-secondary">
           {t('auth.login.noAccount')}{' '}
         </span>
-        <Link 
+        <Link
           href="/auth/register"
           className="text-primary hover:text-primary-dark transition-colors"
         >
@@ -74,4 +97,4 @@ export default function LoginPage() {
       </div>
     </AuthCard>
   );
-} 
+}
