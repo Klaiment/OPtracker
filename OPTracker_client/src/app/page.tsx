@@ -67,10 +67,15 @@ export default function Home() {
           {t('home.footer.description')}
         </p>
         <nav>
-          <Link
-            href="/about"
-            className="px-4 text-text hover:text-primary transition-colors"
-          >
+          <Link href="/auth/login" className="px-4 text-text hover:text-primary transition-colors">
+            {t('home.footer.login')}
+          </Link>
+          <span className="text-border mx-2">|</span>
+          <Link href="/auth/register" className="px-4 text-text hover:text-primary transition-colors">
+            {t('home.footer.register')}
+          </Link>
+          <span className="text-border mx-2">|</span>
+          <Link href="/about" className="px-4 text-text hover:text-primary transition-colors">
             {t('home.footer.about')}
           </Link>
           <span className="text-border mx-2">|</span>

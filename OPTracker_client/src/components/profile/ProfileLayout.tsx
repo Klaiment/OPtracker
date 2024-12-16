@@ -19,7 +19,7 @@ export default function ProfileLayout({ children, title }: ProfileLayoutProps) {
 
   return (
     <div className="min-h-screen bg-background text-text p-6">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <h1 className="text-3xl font-bold text-primary mb-6">
           {t(title)}
         </h1>

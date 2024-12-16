@@ -15,6 +15,7 @@ import { config } from '@system/next.config';
 import axios from 'axios';
 import { showNotification } from '@/utils/notifications';
 import { useRouter } from 'next/navigation';
+import PasswordStrengthBar from '@/components/auth/PasswordStrengthBar';
 
 export default function RegisterPage() {
   const { t } = useTranslation();
@@ -105,6 +106,7 @@ export default function RegisterPage() {
           error={errors.password}
           required
         />
+        <PasswordStrengthBar password={formData.password} />
         <AuthInput
           label={t('auth.register.confirmPassword')}
           type="password"

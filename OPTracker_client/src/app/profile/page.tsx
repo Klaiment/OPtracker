@@ -12,6 +12,7 @@ import Image from 'next/image';
 import { UserProfile } from '@/types/user';
 import ProfileLayout from '@/components/profile/ProfileLayout';
 import RecentActivity from '@/components/profile/RecentActivity';
+import DashboardLayout from '@/components/dashboard/DashboardLayout';
 
 // Example data
 const mockProfile: UserProfile = {
@@ -64,6 +65,7 @@ export default function ProfilePage() {
   };
 
   return (
+    <DashboardLayout>
     <ProfileLayout title="profile.title">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Sidebar with avatar and quick stats */}
@@ -145,7 +147,7 @@ export default function ProfilePage() {
                   type="text"
                   value={profile.username}
                   readOnly
-                  className="w-full p-2 bg-background border border-border rounded"
+                  className="w-full p-2 bg-background border border-border rounded hover:border-primary transition-colors"
                 />
               </div>
               <div>
@@ -156,7 +158,7 @@ export default function ProfilePage() {
                   type="email"
                   value={profile.email}
                   readOnly
-                  className="w-full p-2 bg-background border border-border rounded"
+                  className="w-full p-2 bg-background border border-border rounded hover:border-primary transition-colors"
                 />
               </div>
               <button
@@ -176,13 +178,13 @@ export default function ProfilePage() {
                 <span className="block text-sm text-text-secondary">
                   {t('profile.fields.uploaded')}
                 </span>
-                <span className="text-lg font-medium">{profile.stats.uploaded}</span>
+                <span className="text-lg font-medium text-green">{profile.stats.uploaded}</span>
               </div>
               <div>
                 <span className="block text-sm text-text-secondary">
                   {t('profile.fields.downloaded')}
                 </span>
-                <span className="text-lg font-medium">{profile.stats.downloaded}</span>
+                <span className="text-lg font-medium text-primary">{profile.stats.downloaded}</span>
               </div>
             </div>
           </section>
@@ -222,6 +224,7 @@ export default function ProfilePage() {
           <RecentActivity />
         </div>
       </div>
-    </ProfileLayout>
+      </ProfileLayout>
+    </DashboardLayout>
   );
 } 

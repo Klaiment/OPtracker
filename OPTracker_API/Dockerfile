@@ -20,7 +20,7 @@ ENV NODE_ENV=${NODE_ENV}
 WORKDIR /opt/
 
 # Copier les fichiers de configuration de npm
-COPY package.json package-lock.json ./
+COPY package.json ./
 
 # Forcer npm à installer sharp et augmenter le timeout en cas de lenteurs réseau
 RUN npm install -g node-gyp
@@ -45,4 +45,4 @@ RUN ["npm", "run", "build"]
 EXPOSE 1337
 
 # Lancer l'application en mode développement
-CMD ["npm", "run", "start"]
+CMD ["npm", "run", "develop"]
