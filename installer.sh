@@ -1,7 +1,10 @@
 #!/bin/bash
 
 # Demande des informations à l'utilisateur
-
+if [ "$EUID" -ne 0 ]; then
+  echo "Veuillez exécuter ce script en tant que superutilisateur (sudo)."
+  exit 1
+fi
 sudo apt update
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
