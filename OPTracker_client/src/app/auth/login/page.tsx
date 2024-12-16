@@ -19,7 +19,9 @@ import { useRouter } from 'next/navigation';
 export default function LoginPage() {
   const { t } = useTranslation();
   const router = useRouter();
-
+  if (localStorage.getItem('token')) {
+    router.push('/');
+  }
   const [formData, setFormData] = useState({
     username: '',
     password: '',

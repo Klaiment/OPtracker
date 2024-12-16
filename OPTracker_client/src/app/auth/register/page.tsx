@@ -11,17 +11,22 @@ import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
 import AuthCard from '@/components/auth/AuthCard';
 import AuthInput from '@/components/auth/AuthInput';
-import { config } from "@system/next.config";
-import axios from "axios";
-import {showNotification} from "@/utils/notifications";
+import { config } from '@system/next.config';
+import axios from 'axios';
+import { showNotification } from '@/utils/notifications';
+import { useRouter } from 'next/navigation';
 
 export default function RegisterPage() {
   const { t } = useTranslation();
+  const router = useRouter();
+  if (localStorage.getItem('token')) {
+    router.push('/');
+  }
   const [formData, setFormData] = useState({
     username: '',
     email: '',
     password: '',
-    confirmPassword: ''
+    confirmPassword: '',
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
 
@@ -52,15 +57,18 @@ export default function RegisterPage() {
     e.preventDefault();
     if (validateForm()) {
       // Here goes the registration logic
-      await axios.post(`${config.WEBSITE_URL}/api/auth/local/register`, {
-        username: formData.username,
-        email: formData.email,
-        password: formData.password
-      }).then((res) => {
-        showNotification.success(t('auth.notification.successRegister'));
-      }).catch((err) => {
-        showNotification.error(t('auth.notification.error'));
-      });
+      await axios
+        .post(`${config.WEBSITE_URL}/api/auth/local/register`, {
+          username: formData.username,
+          email: formData.email,
+          password: formData.password,
+        })
+        .then((res) => {
+          showNotification.success(t('auth.notification.successRegister'));
+        })
+        .catch((err) => {
+          showNotification.error(t('auth.notification.error'));
+        });
     }
   };
 
@@ -71,7 +79,9 @@ export default function RegisterPage() {
           label={t('auth.register.username')}
           type="text"
           value={formData.username}
-          onChange={(e) => setFormData(prev => ({ ...prev, username: e.target.value }))}
+          onChange={(e) =>
+            setFormData((prev) => ({ ...prev, username: e.target.value }))
+          }
           error={errors.username}
           required
         />
@@ -79,7 +89,9 @@ export default function RegisterPage() {
           label={t('auth.register.email')}
           type="email"
           value={formData.email}
-          onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
+          onChange={(e) =>
+            setFormData((prev) => ({ ...prev, email: e.target.value }))
+          }
           error={errors.email}
           required
         />
@@ -87,7 +99,9 @@ export default function RegisterPage() {
           label={t('auth.register.password')}
           type="password"
           value={formData.password}
-          onChange={(e) => setFormData(prev => ({ ...prev, password: e.target.value }))}
+          onChange={(e) =>
+            setFormData((prev) => ({ ...prev, password: e.target.value }))
+          }
           error={errors.password}
           required
         />
@@ -95,14 +109,19 @@ export default function RegisterPage() {
           label={t('auth.register.confirmPassword')}
           type="password"
           value={formData.confirmPassword}
-          onChange={(e) => setFormData(prev => ({ ...prev, confirmPassword: e.target.value }))}
+          onChange={(e) =>
+            setFormData((prev) => ({
+              ...prev,
+              confirmPassword: e.target.value,
+            }))
+          }
           error={errors.confirmPassword}
           required
         />
-        
+
         <button
           type="submit"
-          className="w-full bg-primary text-background py-2 rounded 
+          className="w-full bg-primary text-background py-2 rounded
                      hover:bg-primary-dark transition-colors font-medium"
         >
           {t('auth.register.submit')}
@@ -113,7 +132,7 @@ export default function RegisterPage() {
         <span className="text-text-secondary">
           {t('auth.register.hasAccount')}{' '}
         </span>
-        <Link 
+        <Link
           href="/auth/login"
           className="text-primary hover:text-primary-dark transition-colors"
         >
@@ -122,4 +141,4 @@ export default function RegisterPage() {
       </div>
     </AuthCard>
   );
-} 
+}
